@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_security_acl_role">
+    <sys_security_acl_role action="INSERT_OR_UPDATE">
+        <sys_class_name>sys_security_acl_role</sys_class_name>
+        <sys_created_by>A242291</sys_created_by>
+        <sys_created_on>2019-07-01 19:42:32</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>50fb4c87dbda3b003098757a8c9619cf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_adsi_cust_credit_financial_metric.x_adsi_cust_credit.customer_credit_limit_user</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_security_acl display_value="x_adsi_cust_credit_financial_metric">d0fb4c87dbda3b003098757a8c9619cc</sys_security_acl>
+        <sys_update_name>sys_security_acl_role_50fb4c87dbda3b003098757a8c9619cf</sys_update_name>
+        <sys_updated_by>A242291</sys_updated_by>
+        <sys_updated_on>2019-07-01 19:42:32</sys_updated_on>
+        <sys_user_role display_value="x_adsi_cust_credit.customer_credit_limit_user" name="x_adsi_cust_credit.customer_credit_limit_user">c74fb7badb9a3b003098757a8c961973</sys_user_role>
+        <transaction_id/>
+    </sys_security_acl_role>
+</record_update>

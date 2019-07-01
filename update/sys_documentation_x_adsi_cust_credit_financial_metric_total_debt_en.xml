@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="total_debt" label="Total Debt" language="en" table="x_adsi_cust_credit_financial_metric">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>total_debt</element>
+            <help/>
+            <hint/>
+            <label>Total Debt</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_financial_metric</name>
+            <plural>Total Debts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-01 19:42:33</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>2cfb8c87dbda3b003098757a8c961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Total Debt</sys_name>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_documentation_x_adsi_cust_credit_financial_metric_total_debt_en</sys_update_name>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-01 19:42:33</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
