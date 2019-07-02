@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="core_company" label="Credit Customer" max_length="40" name="x_adsi_cust_credit_credit_customer" type="collection">
+        <element label="About the Company" max_length="2000" name="about_the_company" type="string"/>
+        <element label="Active Child Account 1" max_length="200" name="active_child_account_1" type="string"/>
+        <element label="Active Child Account 2" max_length="200" name="active_child_account_2" type="string"/>
+        <element label="Active Child Account 3" max_length="200" name="active_child_account_3" type="string"/>
+        <element label="Active Child Account 4" max_length="200" name="active_child_account_4" type="string"/>
+        <element label="Active Child Account 5" max_length="200" name="active_child_account_5" type="string"/>
+        <element label="Active Child Account 6" max_length="200" name="active_child_account_6" type="string"/>
+        <element display="true" label="Credit Customer Name" max_length="200" name="credit_customer_name" type="string"/>
+        <element label="Credit Review" max_length="200" name="credit_review" type="string"/>
+        <element label="Current AR" max_length="200" name="current_ar" type="string"/>
+        <element label="Current Exposure" max_length="200" name="current_exposure" type="string"/>
+        <element label="Current Payment Terms" max_length="200" name="current_payment_terms" type="string"/>
+        <element label="Current Year Forecasted Sales" max_length="200" name="current_year_forecasted_sales" type="string"/>
+        <element label="Customer Since" max_length="200" name="customer_since" type="string"/>
+        <element label="Financial Highlights" max_length="2000" name="financial_highlights" type="string"/>
+        <element label="GBP Number" max_length="200" name="gbp_number" type="string"/>
+        <element label="Liquidity Ratio" max_length="2000" name="liquidity_ratio" type="string"/>
+        <element label="Pay Habit" max_length="200" name="pay_habit" type="string"/>
+        <element label="Prior Year Sales" max_length="200" name="prior_year_sales" type="string"/>
+    </element>
+</database>

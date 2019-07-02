@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="financial_metric_name" table="x_adsi_cust_credit_financial_metric">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="customer_since" table="x_adsi_cust_credit_credit_customer">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
         <attributes/>
         <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current)
-{
-	
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
 
-	return current.name + " " + current.fiscal_year_end_date;  // return the calculated value
+	// Add your code here
+	return '';  // return the calculated value
 
-}
-)(current);]]></calculation>
+})(current);]]></calculation>
         <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Financial Metric Name</column_label>
+        <column_label>Customer Since</column_label>
         <comments/>
         <create_roles/>
         <default_value/>
@@ -24,12 +22,12 @@
         <delete_roles/>
         <dependent/>
         <dependent_on_field/>
-        <display>true</display>
+        <display>false</display>
         <dynamic_creation>false</dynamic_creation>
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>financial_metric_name</element>
+        <element>customer_since</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
@@ -37,10 +35,10 @@
         <internal_type display_value="String">string</internal_type>
         <mandatory>false</mandatory>
         <max_length>200</max_length>
-        <name>x_adsi_cust_credit_financial_metric</name>
+        <name>x_adsi_cust_credit_credit_customer</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>true</read_only>
+        <read_only>false</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -54,25 +52,25 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>A242291</sys_created_by>
-        <sys_created_on>2019-07-01 19:42:28</sys_created_on>
+        <sys_created_on>2019-07-02 13:10:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>4060044bdb9a3b003098757a8c9619ff</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>Financial Metric Name</sys_name>
+        <sys_id>9a077bc3db9e3b00959bdd0b5e961968</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Customer Since</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
-        <sys_update_name>sys_dictionary_x_adsi_cust_credit_financial_metric_financial_metric_name</sys_update_name>
+        <sys_update_name>sys_dictionary_x_adsi_cust_credit_credit_customer_customer_since</sys_update_name>
         <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-01 19:47:23</sys_updated_on>
+        <sys_updated_on>2019-07-02 13:10:57</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>true</virtual>
+        <virtual>false</virtual>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>

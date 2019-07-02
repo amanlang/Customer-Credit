@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="gbp_number" label="GBP Number" language="en" table="x_adsi_cust_credit_credit_customer">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>gbp_number</element>
+            <help/>
+            <hint/>
+            <label>GBP Number</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <plural>GBP Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 13:10:59</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>a6eb7f0bdb9e3b00959bdd0b5e961965</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>GBP Number</sys_name>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_documentation_x_adsi_cust_credit_credit_customer_gbp_number_en</sys_update_name>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 13:10:59</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
