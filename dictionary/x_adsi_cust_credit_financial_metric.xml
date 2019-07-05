@@ -11,7 +11,6 @@
         <element label="Current Ratio" max_length="200" name="current_ratio" type="float"/>
         <element label="Depreciation" max_length="200" name="depreciation" type="currency"/>
         <element label="EBITDA" max_length="200" name="ebitda" type="currency"/>
-        <element calculation="(function calculatedFieldValue(current)&#13;&#10;{&#13;&#10;&#9;&#13;&#10;&#13;&#10;&#9;return current.name + &quot; &quot; + current.fiscal_year_end_date;  // return the calculated value&#13;&#10;&#13;&#10;}&#13;&#10;)(current);" display="true" label="Financial Metric Name" max_length="200" name="financial_metric_name" read_only="true" type="string" virtual="true"/>
         <element label="Fiscal Year End Date" max_length="200" name="fiscal_year_end_date" type="glide_date"/>
         <element label="Free Cash Flow" max_length="200" name="free_cash_flow" type="currency"/>
         <element label="Income Tax" max_length="200" name="income_tax" type="currency"/>
@@ -28,6 +27,7 @@
         <element label="Submitted" max_length="200" name="submitted" type="boolean"/>
         <element label="Total Assets" max_length="200" name="total_assets" type="currency"/>
         <element label="Total Debt" max_length="200" name="total_debt" type="currency"/>
+        <element label="Total Liability" max_length="200" name="total_liability" type="currency"/>
         <element label="Working Capital" max_length="200" name="working_capital" type="currency"/>
     </element>
 </database>
