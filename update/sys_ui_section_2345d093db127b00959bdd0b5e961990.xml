@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="2345d093db127b00959bdd0b5e961990" sys_domain="global" table="x_adsi_cust_credit_customer_credit_review" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <position>0</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>2345d093db127b00959bdd0b5e961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assignment_group</element>
+            <position>1</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>a745d093db127b00959bdd0b5e961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>assigned_to</element>
+            <position>2</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>2b45d093db127b00959bdd0b5e961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>cmdb_ci</element>
+            <position>3</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>ab45d093db127b00959bdd0b5e961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>active</element>
+            <position>4</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>2f45d093db127b00959bdd0b5e961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>5</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>af45d093db127b00959bdd0b5e961991</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>priority</element>
+            <position>6</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>2345d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>7</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>a345d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent</element>
+            <position>8</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>2745d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>9</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>a745d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>10</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>2b45d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>description</element>
+            <position>11</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>ab45d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>work_notes</element>
+            <position>12</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>2f45d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_comments_and_work_notes</element>
+            <position>13</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_id>af45d093db127b00959bdd0b5e961992</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>x_adsi_cust_credit_customer_credit_review</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-02 15:01:55</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2345d093db127b00959bdd0b5e961990</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_adsi_cust_credit_customer_credit_review</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_ui_section_2345d093db127b00959bdd0b5e961990</sys_update_name>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-02 15:01:55</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

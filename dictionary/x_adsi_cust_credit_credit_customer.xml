@@ -7,7 +7,6 @@
         <element label="Active Child Account 4" max_length="200" name="active_child_account_4" type="string"/>
         <element label="Active Child Account 5" max_length="200" name="active_child_account_5" type="string"/>
         <element label="Active Child Account 6" max_length="200" name="active_child_account_6" type="string"/>
-        <element display="true" label="Credit Customer Name" max_length="200" name="credit_customer_name" type="string"/>
         <element label="Credit Review" max_length="200" name="credit_review" type="string"/>
         <element label="Current AR" max_length="200" name="current_ar" type="string"/>
         <element label="Current Exposure" max_length="200" name="current_exposure" type="string"/>
