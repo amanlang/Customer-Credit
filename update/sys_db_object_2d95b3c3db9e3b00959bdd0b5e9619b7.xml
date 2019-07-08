@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_db_object">
     <sys_db_object action="INSERT_OR_UPDATE">
         <access>public</access>
-        <actions_access>false</actions_access>
-        <alter_access>false</alter_access>
-        <client_scripts_access>false</client_scripts_access>
-        <configuration_access>false</configuration_access>
+        <actions_access>true</actions_access>
+        <alter_access>true</alter_access>
+        <client_scripts_access>true</client_scripts_access>
+        <configuration_access>true</configuration_access>
         <create_access>true</create_access>
         <create_access_controls>true</create_access_controls>
         <delete_access>false</delete_access>
@@ -24,7 +24,7 @@
         <sys_created_on>2019-07-02 13:10:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>2d95b3c3db9e3b00959bdd0b5e9619b7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Credit Customer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy/>
@@ -32,7 +32,7 @@
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_db_object_2d95b3c3db9e3b00959bdd0b5e9619b7</sys_update_name>
         <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-02 13:10:58</sys_updated_on>
+        <sys_updated_on>2019-07-08 19:02:36</sys_updated_on>
         <update_access>true</update_access>
         <user_role display_value="x_adsi_cust_credit.customer_credit_limit_user" name="x_adsi_cust_credit.customer_credit_limit_user">c74fb7badb9a3b003098757a8c961973</user_role>
         <ws_access>true</ws_access>

@@ -54,16 +54,16 @@
         <sys_created_by>A242291</sys_created_by>
         <sys_created_on>2019-07-02 13:10:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>e2eb7f0bdb9e3b00959bdd0b5e96190f</sys_id>
+        <sys_id>c1c283c5dbe673003098757a8c961946</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>x_adsi_cust_credit_credit_customer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
-        <sys_update_name>sys_dictionary_x_adsi_cust_credit_credit_customer_null</sys_update_name>
-        <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-02 13:10:58</sys_updated_on>
+        <sys_update_name>sys_dictionary_x_adsi_cust_credit_credit_customer_NULL</sys_update_name>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2019-07-08 14:09:25</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
