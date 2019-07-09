@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_dictionary_override">
+    <sys_dictionary_override action="INSERT_OR_UPDATE">
+        <attributes/>
+        <attributes_override>false</attributes_override>
+        <base_table>fm_rate_card</base_table>
+        <calculation/>
+        <calculation_override>false</calculation_override>
+        <default_value/>
+        <default_value_override>false</default_value_override>
+        <dependent/>
+        <dependent_override>false</dependent_override>
+        <display_override>false</display_override>
+        <element>name</element>
+        <mandatory>false</mandatory>
+        <mandatory_override>false</mandatory_override>
+        <name>x_adsi_cust_credit_financial_metric</name>
+        <read_only>true</read_only>
+        <read_only_override>true</read_only_override>
+        <reference_qual/>
+        <reference_qual_override>false</reference_qual_override>
+        <sys_class_name>sys_dictionary_override</sys_class_name>
+        <sys_created_by>A242291</sys_created_by>
+        <sys_created_on>2019-07-09 19:30:55</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>3ef55d2ddbeab3003098757a8c9619c1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>name</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_dictionary_override_3ef55d2ddbeab3003098757a8c9619c1</sys_update_name>
+        <sys_updated_by>A242291</sys_updated_by>
+        <sys_updated_on>2019-07-09 19:30:55</sys_updated_on>
+    </sys_dictionary_override>
+</record_update>

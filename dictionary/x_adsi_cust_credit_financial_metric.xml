@@ -6,6 +6,7 @@
         <element label="Cash" max_length="200" name="cash" type="currency"/>
         <element label="Cash Flow from Operations" max_length="200" name="cash_flow_from_operations" type="currency"/>
         <element label="Cash Ratio" max_length="200" name="cash_ratio" type="float"/>
+        <element label="Credit Company" max_length="32" name="credit_company" reference="x_adsi_cust_credit_credit_customer" type="reference"/>
         <element label="Current Assets" max_length="200" name="current_assets" type="currency"/>
         <element label="Current Liabilities" max_length="200" name="current_liabilities" type="currency"/>
         <element label="Current Ratio" max_length="200" name="current_ratio" type="float"/>
@@ -29,5 +30,8 @@
         <element label="Total Debt" max_length="200" name="total_debt" type="currency"/>
         <element label="Total Liability" max_length="200" name="total_liability" type="currency"/>
         <element label="Working Capital" max_length="200" name="working_capital" type="currency"/>
+        <index name="index">
+            <element name="credit_company"/>
+        </index>
     </element>
 </database>
