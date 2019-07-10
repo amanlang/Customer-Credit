@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="Business with AdvanSix" section_id="436365fddb2af3003098757a8c961950" sys_domain="global" table="x_adsi_cust_credit_credit_customer" version="3" view="Customer_Credit_Approval">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>customer_since</element>
+            <position>0</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-10 15:08:02</sys_created_on>
+            <sys_id>9f63a5fddb2af3003098757a8c9619d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Business with AdvanSix" display_value="Business with AdvanSix" name="x_adsi_cust_credit_credit_customer" sys_domain="global" view="cb6365fddb2af3003098757a8c96194b">436365fddb2af3003098757a8c961950</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-10 15:08:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_year_forecasted_sales</element>
+            <position>1</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-10 15:08:02</sys_created_on>
+            <sys_id>1363a5fddb2af3003098757a8c9619d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Business with AdvanSix" display_value="Business with AdvanSix" name="x_adsi_cust_credit_credit_customer" sys_domain="global" view="cb6365fddb2af3003098757a8c96194b">436365fddb2af3003098757a8c961950</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-10 15:08:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>current_ar</element>
+            <position>2</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-10 15:08:02</sys_created_on>
+            <sys_id>9363a5fddb2af3003098757a8c9619d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Business with AdvanSix" display_value="Business with AdvanSix" name="x_adsi_cust_credit_credit_customer" sys_domain="global" view="cb6365fddb2af3003098757a8c96194b">436365fddb2af3003098757a8c961950</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-10 15:08:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>financial_highlights</element>
+            <position>3</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-10 15:08:02</sys_created_on>
+            <sys_id>1763a5fddb2af3003098757a8c9619d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Business with AdvanSix" display_value="Business with AdvanSix" name="x_adsi_cust_credit_credit_customer" sys_domain="global" view="cb6365fddb2af3003098757a8c96194b">436365fddb2af3003098757a8c961950</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-10 15:08:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>liquidity_ratio</element>
+            <position>4</position>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-10 15:08:02</sys_created_on>
+            <sys_id>9763a5fddb2af3003098757a8c9619d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="Business with AdvanSix" display_value="Business with AdvanSix" name="x_adsi_cust_credit_credit_customer" sys_domain="global" view="cb6365fddb2af3003098757a8c96194b">436365fddb2af3003098757a8c961950</sys_ui_section>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-10 15:08:02</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>Business with AdvanSix</caption>
+            <header>false</header>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-10 15:08:01</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>436365fddb2af3003098757a8c961950</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Business with AdvanSix</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_ui_section_436365fddb2af3003098757a8c961950</sys_update_name>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-10 15:08:01</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Customer Credit Approval" name="Customer_Credit_Approval">cb6365fddb2af3003098757a8c96194b</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+</record_update>

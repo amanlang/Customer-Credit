@@ -22,7 +22,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1821d05ddbea73003098757a8c9619b4</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>Set to Customer Credit Approval view</sys_name>
         <sys_overrides/>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
@@ -31,7 +31,7 @@
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sysrule_view_1821d05ddbea73003098757a8c9619b4</sys_update_name>
         <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-08 19:52:31</sys_updated_on>
+        <sys_updated_on>2019-07-10 15:39:03</sys_updated_on>
         <table>x_adsi_cust_credit_customer_credit_review</table>
         <view>customer_credit_approval</view>
     </sysrule_view>

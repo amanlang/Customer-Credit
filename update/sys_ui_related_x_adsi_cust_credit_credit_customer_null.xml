@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_related sys_domain="global" table="x_adsi_cust_credit_credit_customer" version="2" view="">
+        <sys_ui_related_list_entry action="INSERT_OR_UPDATE">
+            <filter/>
+            <list_id display_value="Credit Customer - Default view" name="x_adsi_cust_credit_credit_customer" related_list="NULL" sys_domain="global" view="Default view">d05891eddbeab3003098757a8c9619d0</list_id>
+            <order_by/>
+            <position>0</position>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list_entry</sys_class_name>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-09 19:41:02</sys_created_on>
+            <sys_id>d05891eddbeab3003098757a8c9619d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-09 19:41:02</sys_updated_on>
+        </sys_ui_related_list_entry>
+        <sys_ui_related_list action="INSERT_OR_UPDATE">
+            <calculated_name>Credit Customer - Default view</calculated_name>
+            <filter/>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <order_by/>
+            <position/>
+            <related_list/>
+            <sys_class_name>sys_ui_related_list</sys_class_name>
+            <sys_created_by>A242291</sys_created_by>
+            <sys_created_on>2019-07-09 19:41:01</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>d05891eddbeab3003098757a8c9619d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Credit Customer - Default view</sys_name>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_ui_related_x_adsi_cust_credit_credit_customer_null</sys_update_name>
+            <sys_updated_by>A242291</sys_updated_by>
+            <sys_updated_on>2019-07-09 19:41:01</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_related_list>
+    </sys_ui_related>
+</record_update>
