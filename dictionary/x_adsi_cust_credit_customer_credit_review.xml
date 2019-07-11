@@ -19,7 +19,7 @@
         <element attributes="edge_encryption_enabled=true" label="PAYDEX Grade" max_length="200" name="paydex_grade" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Payment Terms" max_length="200" name="payment_terms" type="string"/>
         <element label="Recommendation" max_length="2000" name="recommendation" type="string"/>
-        <element label="Request Preview" max_length="5000" name="request_preview" type="html"/>
+        <element label="Request Preview" max_length="5000" name="request_preview" read_only="true" type="html"/>
         <element attributes="edge_encryption_enabled=true" label="Required Credit Limit" max_length="200" name="required_credit_limit" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Sales Forecast" max_length="200" name="sales_forecast" type="string"/>
         <element label="Submitted" max_length="200" name="submitted" type="boolean"/>
