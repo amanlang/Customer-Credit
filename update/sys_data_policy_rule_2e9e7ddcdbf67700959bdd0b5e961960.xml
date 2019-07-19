@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_data_policy_rule">
+    <sys_data_policy_rule action="INSERT_OR_UPDATE">
+        <disabled>true</disabled>
+        <field>financial_metric_current_year</field>
+        <mandatory>ignore</mandatory>
+        <sys_class_name>sys_data_policy_rule</sys_class_name>
+        <sys_created_by>H287733</sys_created_by>
+        <sys_created_on>2019-07-18 11:31:35</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_data_policy display_value="">9fddb9dcdbf67700959bdd0b5e961969</sys_data_policy>
+        <sys_id>2e9e7ddcdbf67700959bdd0b5e961960</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>financial_metric_current_year</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_data_policy_rule_2e9e7ddcdbf67700959bdd0b5e961960</sys_update_name>
+        <sys_updated_by>H287733</sys_updated_by>
+        <sys_updated_on>2019-07-18 11:31:35</sys_updated_on>
+        <table>x_adsi_cust_credit_customer_credit_review</table>
+    </sys_data_policy_rule>
+</record_update>

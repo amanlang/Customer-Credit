@@ -3,70 +3,84 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-11 20:37:48</sys_created_on>
-            <sys_id>1b7837cedba63700959bdd0b5e961991</sys_id>
+            <sys_created_by>H287733</sys_created_by>
+            <sys_created_on>2019-07-18 10:52:59</sys_created_on>
+            <sys_id>cdc5fd54dbf67700959bdd0b5e96198c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-11 20:37:48</sys_updated_on>
+            <sys_updated_by>H287733</sys_updated_by>
+            <sys_updated_on>2019-07-18 10:52:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>company</element>
+            <element>state</element>
             <position>1</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-11 20:37:48</sys_created_on>
-            <sys_id>df7837cedba63700959bdd0b5e961991</sys_id>
+            <sys_created_by>H287733</sys_created_by>
+            <sys_created_on>2019-07-18 10:52:59</sys_created_on>
+            <sys_id>41c5fd54dbf67700959bdd0b5e96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-11 20:37:48</sys_updated_on>
+            <sys_updated_by>H287733</sys_updated_by>
+            <sys_updated_on>2019-07-18 10:52:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>credit_customer</element>
+            <position>2</position>
+            <sys_created_by>H287733</sys_created_by>
+            <sys_created_on>2019-07-18 10:52:59</sys_created_on>
+            <sys_id>c1c5fd54dbf67700959bdd0b5e96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
+            <sys_updated_by>H287733</sys_updated_by>
+            <sys_updated_on>2019-07-18 10:52:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>financial_metric_current_year</element>
-            <position>2</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-11 20:37:48</sys_created_on>
-            <sys_id>537837cedba63700959bdd0b5e961992</sys_id>
+            <position>3</position>
+            <sys_created_by>H287733</sys_created_by>
+            <sys_created_on>2019-07-18 10:52:59</sys_created_on>
+            <sys_id>45c5fd54dbf67700959bdd0b5e96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-11 20:37:48</sys_updated_on>
+            <sys_updated_by>H287733</sys_updated_by>
+            <sys_updated_on>2019-07-18 10:52:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>financial_metric_previous_year</element>
-            <position>3</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-11 20:37:48</sys_created_on>
-            <sys_id>d37837cedba63700959bdd0b5e961992</sys_id>
+            <position>4</position>
+            <sys_created_by>H287733</sys_created_by>
+            <sys_created_on>2019-07-18 10:52:59</sys_created_on>
+            <sys_id>c5c5fd54dbf67700959bdd0b5e96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-11 20:37:48</sys_updated_on>
+            <sys_updated_by>H287733</sys_updated_by>
+            <sys_updated_on>2019-07-18 10:52:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>request_preview</element>
-            <position>4</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-11 20:37:48</sys_created_on>
-            <sys_id>577837cedba63700959bdd0b5e961992</sys_id>
+            <position>5</position>
+            <sys_created_by>H287733</sys_created_by>
+            <sys_created_on>2019-07-18 10:52:59</sys_created_on>
+            <sys_id>49c5fd54dbf67700959bdd0b5e96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_customer_credit_review" sys_domain="global" view="Default view">2345d093db127b00959bdd0b5e961990</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-11 20:37:48</sys_updated_on>
+            <sys_updated_by>H287733</sys_updated_by>
+            <sys_updated_on>2019-07-18 10:52:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>

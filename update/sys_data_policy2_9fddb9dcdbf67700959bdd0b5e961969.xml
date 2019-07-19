@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_data_policy2">
+    <sys_data_policy2 action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <apply_import_set>false</apply_import_set>
+        <apply_soap>true</apply_soap>
+        <conditions table="x_adsi_cust_credit_customer_credit_review">state=8^EQ<item endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="8"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </conditions>
+        <description/>
+        <enforce_ui>true</enforce_ui>
+        <inherit>false</inherit>
+        <model_id/>
+        <model_table>x_adsi_cust_credit_customer_credit_review</model_table>
+        <reverse_if_false>true</reverse_if_false>
+        <short_description/>
+        <sys_class_name>sys_data_policy2</sys_class_name>
+        <sys_created_by>H287733</sys_created_by>
+        <sys_created_on>2019-07-18 11:29:05</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>9fddb9dcdbf67700959bdd0b5e961969</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_data_policy2_9fddb9dcdbf67700959bdd0b5e961969</sys_update_name>
+        <sys_updated_by>H287733</sys_updated_by>
+        <sys_updated_on>2019-07-18 11:29:05</sys_updated_on>
+    </sys_data_policy2>
+</record_update>

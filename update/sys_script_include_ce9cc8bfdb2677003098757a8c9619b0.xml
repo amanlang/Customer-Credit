@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_adsi_cust_credit.PreviewRequest_CreditCustomer</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>PreviewRequest_CreditCustomer</name>
+        <script><![CDATA[var PreviewRequest_CreditCustomer = Class.create();
+PreviewRequest_CreditCustomer.prototype = {
+    initialize: function() {
+    },
+	//---------------------------------------------------------------------------------------
+	//------ html styles
+	//---------------------------------------------------------------------------------------
+	solidBorder: 'border: 1px solid #000000;',
+	textSize: 'font-size: 10pt;',
+	textFont: 'font-family: verdana,geneva;',
+	cellBgBlue: 'background-color: #a1d8f7;',
+	cellBgGray: 'background-color: #adadad;',
+	underlineText: 'text-decoration: underline;',
+	//---------------------------------------------------------------------------------------
+	//html formatters
+	//---------------------------------------------------------------------------------------
+	boldText: function(textToBold)
+	{
+		return '<strong>' + textToBold + '</strong>';
+	},	
+	//---------------------------------------------------------------------------------------
+	//---------------------------------------------------------------------------------------
+	generatePreview: function()
+	{
+		//declare needed things
+		var solidBorder = 'border: 1px solid #000000;';
+		var boldText = 'font-weight: bold;';
+		var textSize = 'font-size: 10pt;';
+		var textFont = 'font-family: verdana;';
+		var cellBgBlue = 'background-color: #a1d8f7;';
+		var cellBgGray = 'background-color: #adadad;';
+		//main table creation
+		
+		var bigTable = 
+			"<table width='100%'>" +
+			"<tr>" +
+				"<td>" + this.cell_00() + "</td>" +
+				"<td>" + "" + "</td>" +
+			"</tr>" +
+			"<tr>" +
+				"<td>" + this.cell_10() + "</td>" +
+				"<td>" + this.cell_11() + "</td>" +
+			"</tr>" +
+			"<tr>" +
+				"<td>" + "" + "</td>" +
+				"<td>" + this.cell_21() + "</td>" +
+			"</tr>" +
+			"<tr>" +
+				this.cell_30() +
+				this.cell_31() + 
+			"</tr>";			
+			
+		return bigTable;
+	},
+	cell_00: function() //Credit customer details
+	{
+		var subTable = 
+		"<table>" +
+			"<tr>" + 
+				"<td style=" +this.textSize + this.textFont + ">" +
+					"Below is the credit review for BASF SE to decrease the credit limit to $5M from $10M." +
+				"</td>" +
+			"</tr>" +
+			"<tr>" +
+				"<td style=" +this.textSize + this.textFont + ">" +
+					this.boldText("GBP Number:") + ": " +"</span>"+ "gbpvalue" +
+				"</td>" +
+			"</tr>" +
+			"<tr>" +
+				"<td style=" +this.textSize + this.textFont + ">" +
+					this.boldText("Active Child Accounts:") +
+				"</td>" +
+			"</tr>" +
+			"<tr>" +
+				"<td style=" +this.textSize + this.textFont + ">" +
+					"accNum " + "accName" +
+				"</td>" +
+			"</tr>" +
+		"</table>";
+		
+		return subTable;
+	},
+	cell_10: function()
+	{
+		var cellComponent =
+		this.aboutTheCompany() +
+			'<p>&nbsp;</p>' +
+		this.businessWithAsx() +
+			'<p>&nbsp;</p>' +
+		this.financialHighlights() +
+			'<p>&nbsp;</p>' +
+		this.liquidityRatio();
+		
+		return cellComponent;
+
+	},
+	cell_11: function()
+	{//Financial Data Table
+		
+		var normalCell = this.solidBorder + this.textSize + this.textFont;
+		var blueCell = this.cellBgBlue + normalCell;
+		var normalEmptyRow =
+			'<tr>' +
+					'<td style=' + normalCell +'>&nbsp;</td>' +
+					'<td style=' + normalCell + '>&nbsp;</td>' +
+					'<td style=' + normalCell + '>&nbsp;</td>' +
+					'<td style=' + normalCell + '>&nbsp;</td>' +
+			'</tr>';
+		
+		var subTable =
+			'<table cellspacing="0" cellpadding="1" style="width: 100%; margin-left: auto; margin-right: auto;' + this.solidBorder + '">' +
+				'<tbody>' +
+				'<tr>' +
+					'<td style="text-align: center; '+ normalCell + '" colspan="4">' + this.boldText('Financial Data') + '</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + blueCell +'>' + this.boldText('Financial Metrics') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('12/31/2017') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('12/31/2016') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('Diff&nbsp;%') + '</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Cash</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Accounts Receivable</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Inventory</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Total Debt</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				//--- insert normal empty row here
+				normalEmptyRow +
+
+				'<tr>' +
+					'<td style=' + normalCell +'>Current Assets</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Current Liabilities</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + blueCell +'>' + this.boldText('Working Capital') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
+				'</tr>' +
+				//--- insert normal empty row here
+				normalEmptyRow +
+			
+				'<tr>' +
+					'<td style=' + normalCell +'>Total Assets</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Total Liability</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + blueCell +'>' + this.boldText('Net Worth') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
+				'</tr>' +
+				//--- insert normal empty row here
+				normalEmptyRow +
+
+				'<tr>' +
+					'<td style=' + normalCell +'>Net Sales</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Net Fixed Assets</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				//--- insert normal empty row here
+				normalEmptyRow +
+
+				'<tr>' +
+					'<td style=' + normalCell +'>Net Income</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Income Tax</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Interest Expenses</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Interest/Investment Income</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Depreciation</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + blueCell +'>' + this.boldText('EBITDA') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
+				'</tr>' +
+				//--- insert normal empty row here
+				normalEmptyRow +
+			
+				'<tr>' +
+					'<td style=' + normalCell +'>Cash Flow from Operations</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Capital Expenditures</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + blueCell +'>' + this.boldText('Free Cash Flow') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
+				'</tr>' +
+				//--- insert normal empty row here
+				normalEmptyRow +
+			
+				'<tr>' +
+					'<td style=' + normalCell +'>Capital Expenditures</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Current Ratio</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Quick Ratio</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +
+				'<tr>' +
+					'<td style=' + normalCell +'>Cash Ratio</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>$123,456.78</td>' +
+					'<td style=' + normalCell + '>0%</td>' +
+				'</tr>' +			
+			'</tbody>' +
+		'</table>';
+		
+		return subTable;
+	},
+	cell_21: function()
+	{//Scores and Rating Table
+		var normalCell = this.solidBorder + this.textSize + this.textFont;
+		var blueCell = this.cellBgBlue + normalCell;
+		
+		var subTable =
+		'<table cellspacing="0" cellpadding="1" style="width: 100%; ' +this.solidBorder + '">' +
+			'<tbody>' +
+			'<tr>' +
+				'<td style=' + blueCell + '>' + this.boldText('Scores &amp; Rating') + '</td>' +
+				'<td style=' + blueCell + '>' + this.boldText('Grade') + '</td>' +
+				'<td style=' + blueCell + '>' + this.boldText('Analysis') + '</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td style=' + normalCell + '>' + 'Frisk Score' + '</td>' +
+				'<td style=' + normalCell + '>' + '10' + '</td>' +
+				'<td style=' + normalCell + '>' + 'Probability of Bankruptcy range: 0.00% - 10.52%' + '</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td style=' + normalCell + '>' + 'Z" Score' + '</td>' +
+				'<td style=' + normalCell + '>' + '4.4' + '</td>' +
+				'<td style=' + normalCell + '>' + 'Financially Sound' + '</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td style=' + normalCell + '>' + "Moody's" + '</td>' +
+				'<td style=' + normalCell + '>' + 'A1' + '</td>' +
+				'<td style=' + normalCell + '>' + 'Stable' + '</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td style=' + normalCell + '>' + 'Fitch' + '</td>' +
+				'<td style=' + normalCell + '>' + 'A+' + '</td>' +
+				'<td style=' + normalCell + '>' + 'Negative (deteriorating trend)' + '</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td style=' + normalCell + '>' + 'DBT Index' + '</td>' +
+				'<td style=' + normalCell + '>' + '9' + '</td>' +
+				'<td style=' + normalCell + '>' + '0 - 10 Days Beyond Terms' + '</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td style=' + normalCell + '>' + 'PAYDEX' + '</td>' +
+				'<td style=' + normalCell + '>' + '72' + '</td>' +
+				'<td style=' + normalCell + '>' + 'Paying 12 Days past due' + '</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td style=' + normalCell + '>' + 'Fin Stress' + '</td>' +
+				'<td style=' + normalCell + '>' + '20' + '</td>' +
+				'<td style=' + normalCell + '>' + 'Moderate to High Risk of severe financial stress' + '</td>' +
+			'</tr>' +
+			'</tbody>' +
+		'</table>';
+		
+		return subTable;
+	},
+	cell_30: function()
+	{
+		var subPart = 
+		'<td style=' + this.cellBgGray + '>' +
+		'<p><span style=' + this.textFont + this.textSize + '>'+this.boldText('Recommendation')+'</span></p>' +
+		'</td>';
+		
+		return subPart;
+	},
+	cell_31: function()
+	{
+		var subPart = 
+		'<td style=' + this.textFont + this.textSize + '>' +
+		'<p align="justify">Based on the above information, recommendation is to decrease the credit limit to $5M to accommodate orders.</p>' +
+		'</td>';
+		
+		return subPart;
+	},
+	//----------------------------------------------------------------------------------------------------
+	//--- Cell 10 ELEMENT FUNCTIONS ----------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------------------
+	aboutTheCompany: function()
+	{
+		var subTable =
+		'<table style="width: 100%;">' +
+			'<tbody>' +
+			'<tr>' +
+				'<td>' + 
+					'<span style=' + this.textSize + this.textFont + '>' + this.boldText('About the company:') + '</span>' + 
+				'</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td>' +
+					"<p style=" + this.textSize + this.textFont + " align='justify'>This is an example of a company description. It tells about things people would read when they are curios about the company's details. You may experience things that are not usually experienced.</p>" +
+				'</td>' +
+			'</tr>' +
+			'</tbody>' +
+		'</table>';
+		
+		return subTable;		
+	},	
+	businessWithAsx: function()
+	{
+		var underLineLabel = this.textSize + this.textFont + this.underlineText;
+		var subTable =
+		'<table>' +
+			'<tbody>' +
+				'<tr>' +
+					'<td style=' + underLineLabel + '>' + this.boldText('Business With AdvanSix:') + '</td>' +
+				'</tr>' +
+				'<tr>' +
+				'<td>' + 
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Customer Since:') + '&nbsp;yyyy</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('yyyy Forecasted Sales:') + '&nbsp;$20M</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Prior Year Sales:') + '&nbsp;$30M</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Current Payment Terms:') + '&nbsp;Net 30 &amp; Net 60</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Current Exposure:') + '&nbsp;$2.3M</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Pay Habit:') + '&nbsp;Slow</p>' +
+				'</td>' +
+				'</tr>' +
+			'</tbody>' +
+		'</table>';
+		
+		return subTable;
+	},
+	financialHighlights: function()
+	{
+		var underLineLabel = this.textSize + this.textFont + this.underlineText;
+
+		var subTable =
+		'<table style="width: 100%;">' +
+			'<tbody>' +
+			'<tr>' +
+				'<td>' + 
+					'<span style=' + underLineLabel + '>' + this.boldText('Financial Highlights for 2016 - 2017:') + '</span>' + 
+				'</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td>' +
+				"<p style=" + this.textSize + this.textFont + " align='justify'>" +
+			'Sales for the 12 months ended 12/31/2017 increased by 12% to $748 from $668 for the same period last year.' +
+			'Net income for the 12 months ended 12/31/2017 increased by 50% to 70% from $58 for the same period last year.' +
+			'EBITDA for the last 12 months ended 12/31/2017 increased by 16% to $148 from $128  for the same period last year.' +
+			'Free cash flow: $68' +
+			'Total Net Worth: $398' +
+				"</p>" +
+				'</td>' +
+			'</tr>' +
+			'</tbody>' +
+		'</table>';
+		
+		return subTable;		
+	},
+	liquidityRatio: function()
+	{
+		var underLineLabel = this.textSize + this.textFont + this.underlineText;
+
+		var subTable =
+		'<table style="width: 100%;">' +
+			'<tbody>' +
+			'<tr>' +
+				'<td>' + 
+					'<span style=' + underLineLabel + '>' + this.boldText('Liquidity Ratio:') + '</span>' + 
+				'</td>' +
+			'</tr>' +
+			'<tr>' +
+				'<td>' +
+				"<p style=" + this.textSize + this.textFont + " align='justify'>" +
+			'Current Ratio: which indicates that company has a strong liquidity position.' +
+			'Quick Ratio: indicates that the company is very liquid in clearing the short term obligation without depending on their inventory.' +
+			'Cash Ratio: indicates that the company has very low cash reserves to cover the its current debt.' +
+				"</p>" +
+				'</td>' +
+			'</tr>' +
+			'</tbody>' +
+		'</table>';
+		
+		return subTable;		
+	},	
+	type: 'PreviewRequest_CreditCustomer'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>A242291</sys_created_by>
+        <sys_created_on>2019-07-16 14:17:27</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>ce9cc8bfdb2677003098757a8c9619b0</sys_id>
+        <sys_mod_count>50</sys_mod_count>
+        <sys_name>PreviewRequest_CreditCustomer</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_script_include_ce9cc8bfdb2677003098757a8c9619b0</sys_update_name>
+        <sys_updated_by>A242291</sys_updated_by>
+        <sys_updated_on>2019-07-18 12:37:06</sys_updated_on>
+    </sys_script_include>
+</record_update>
