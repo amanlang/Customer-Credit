@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element extends="task" label="Customer Credit Review" max_length="40" name="x_adsi_cust_credit_customer_credit_review" sizeclass="2" type="collection">
+    <element extends="task" label="Customer Credit Review" max_length="40" name="x_adsi_cust_credit_customer_credit_review" sizeclass="1" type="collection">
         <element label="Commercial Credit Score Analysis" max_length="200" name="commercial_credit_score_analysis" type="string"/>
         <element label="Commercial Credit Score Grade" max_length="200" name="commercial_credit_score_grade" type="string"/>
         <element label="Credit Customer" max_length="32" name="credit_customer" reference="x_adsi_cust_credit_credit_customer" type="reference"/>
@@ -9,21 +9,21 @@
         <element label="Financial Metric Previous Year" max_length="32" name="financial_metric_previous_year" reference="x_adsi_cust_credit_financial_metric" type="reference"/>
         <element label="Fin Stress Analysis" max_length="200" name="fin_stress_analysis" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Fin Stress Grade" max_length="200" name="fin_stress_grade" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Fitch Analysis" max_length="200" name="fitch_analysis" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Fitch Grade" max_length="200" name="fitch_grade" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Frisk Score Analysis" max_length="200" name="frisk_score_analysis" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Frisk Score Grade" max_length="200" name="frisk_score_grade" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Moody's Analysis" max_length="200" name="moodys_analysis" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Moody's Grade" max_length="200" name="moodys_grade" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="PAYDEX Analysis" max_length="200" name="paydex_analysis" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="PAYDEX Grade" max_length="200" name="paydex_grade" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Payment Terms" max_length="200" name="payment_terms" type="string"/>
+        <element label="Fitch Analysis" max_length="200" name="fitch_analysis" type="string"/>
+        <element label="Fitch Grade" max_length="200" name="fitch_grade" type="string"/>
+        <element label="Frisk Score Analysis" max_length="200" name="frisk_score_analysis" type="string"/>
+        <element label="Frisk Score Grade" max_length="200" name="frisk_score_grade" type="string"/>
+        <element label="Moody's Analysis" max_length="200" name="moodys_analysis" type="string"/>
+        <element label="Moody's Grade" max_length="200" name="moodys_grade" type="string"/>
+        <element label="PAYDEX Analysis" max_length="200" name="paydex_analysis" type="string"/>
+        <element label="PAYDEX Grade" max_length="200" name="paydex_grade" type="string"/>
+        <element label="Payment Terms" max_length="200" name="payment_terms" type="string"/>
         <element label="Recommendation" max_length="2000" name="recommendation" type="string"/>
         <element label="Request Preview" max_length="5000" name="request_preview" read_only="true" type="html"/>
-        <element attributes="edge_encryption_enabled=true" label="Required Credit Limit" max_length="200" name="required_credit_limit" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Sales Forecast" max_length="200" name="sales_forecast" type="string"/>
+        <element label="Required Credit Limit" max_length="200" name="required_credit_limit" type="string"/>
+        <element label="Sales Forecast" max_length="200" name="sales_forecast" type="string"/>
         <element label="Submitted" max_length="200" name="submitted" type="boolean"/>
-        <element attributes="edge_encryption_enabled=true" label="Z Score Analysis" max_length="200" name="z_score_analysis" type="string"/>
-        <element attributes="edge_encryption_enabled=true" label="Z Score Grade" max_length="200" name="z_score_grade" type="string"/>
+        <element label="Z Score Analysis" max_length="200" name="z_score_analysis" type="string"/>
+        <element label="Z Score Grade" max_length="200" name="z_score_grade" type="string"/>
     </element>
 </database>

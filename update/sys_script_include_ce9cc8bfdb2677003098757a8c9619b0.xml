@@ -8,7 +8,8 @@
         <name>PreviewRequest_CreditCustomer</name>
         <script><![CDATA[var PreviewRequest_CreditCustomer = Class.create();
 PreviewRequest_CreditCustomer.prototype = {
-    initialize: function() {
+    initialize: function()
+	{
     },
 	//---------------------------------------------------------------------------------------
 	//------ html styles
@@ -25,10 +26,10 @@ PreviewRequest_CreditCustomer.prototype = {
 	boldText: function(textToBold)
 	{
 		return '<strong>' + textToBold + '</strong>';
-	},	
+	},
 	//---------------------------------------------------------------------------------------
 	//---------------------------------------------------------------------------------------
-	generatePreview: function()
+	generatePreview: function(currentObject)
 	{
 		//declare needed things
 		var solidBorder = 'border: 1px solid #000000;';
@@ -38,40 +39,78 @@ PreviewRequest_CreditCustomer.prototype = {
 		var cellBgBlue = 'background-color: #a1d8f7;';
 		var cellBgGray = 'background-color: #adadad;';
 		//main table creation
+		//cell contains the following:
+		//----------------------------
+		//cell_00 - Credit customer details
+		//cell_10 - About the Company, Business w/ ASX , Liquidity Ratio
+		//cell_11 - Financial Data Table
+		//cell_21 - Scores and Rating Table
+		//cell_30 - Recommendation Label
+		//cell_31 - Recommendation Value
+		//----------------------------
 		
 		var bigTable = 
 			"<table width='100%'>" +
 			"<tr>" +
-				"<td>" + this.cell_00() + "</td>" +
+				"<td>" + this.cell_00(currentObject) + "</td>" +
 				"<td>" + "" + "</td>" +
 			"</tr>" +
 			"<tr>" +
-				"<td>" + this.cell_10() + "</td>" +
-				"<td>" + this.cell_11() + "</td>" +
+				"<td>" + this.cell_10(currentObject) + "</td>" +
+				"<td>" + this.cell_11(currentObject) + "</td>" +
 			"</tr>" +
 			"<tr>" +
 				"<td>" + "" + "</td>" +
-				"<td>" + this.cell_21() + "</td>" +
+				"<td>" + this.cell_21(currentObject) + "</td>" +
 			"</tr>" +
 			"<tr>" +
 				this.cell_30() +
-				this.cell_31() + 
+				this.cell_31(currentObject) + 
 			"</tr>";			
 			
 		return bigTable;
 	},
-	cell_00: function() //Credit customer details
+	cell_00: function(currentObject) //Credit customer details
 	{
+		var creditCustomer = 'Credit Customer Name';
+		var gbpNumber = 'GBP123SAMPLE';
+		var accName = '';
+		//fill in details if data is available
+		if(currentObject)
+		{
+			creditCustomer = String(currentObject.credit_customer.name);
+			gbpNumber = String(currentObject.credit_customer.gbp_number);
+			//fill in account names
+			for(var ctr = 1; ctr <= 6; ctr++)
+			{
+				if(String(currentObject.credit_customer["active_child_account_" + ctr]) != '')
+				{
+					if(accName == '')
+					{
+						accName = String(currentObject.credit_customer["active_child_account_" + ctr]);
+					}
+					else
+					{
+						accName = accName + '<br></br>';
+						accName = accName + String(currentObject.credit_customer["active_child_account_" + ctr]);
+						
+					}
+				}
+			}
+			if(accName == '')
+				accName = 'accName BCDEF';
+		}
+		
 		var subTable = 
 		"<table>" +
 			"<tr>" + 
 				"<td style=" +this.textSize + this.textFont + ">" +
-					"Below is the credit review for BASF SE to decrease the credit limit to $5M from $10M." +
+					"Below is the credit review for " + creditCustomer + " to decrease the credit limit to $5M from $10M." +
 				"</td>" +
 			"</tr>" +
 			"<tr>" +
 				"<td style=" +this.textSize + this.textFont + ">" +
-					this.boldText("GBP Number:") + ": " +"</span>"+ "gbpvalue" +
+					this.boldText("GBP Number:") + ": " +"</span>"+ gbpNumber +
 				"</td>" +
 			"</tr>" +
 			"<tr>" +
@@ -81,30 +120,91 @@ PreviewRequest_CreditCustomer.prototype = {
 			"</tr>" +
 			"<tr>" +
 				"<td style=" +this.textSize + this.textFont + ">" +
-					"accNum " + "accName" +
+				accName +
 				"</td>" +
 			"</tr>" +
 		"</table>";
 		
 		return subTable;
 	},
-	cell_10: function()
+	cell_10: function(currentObject) //About the Company, Business w/ ASX , Liquidity Ratio
 	{
 		var cellComponent =
-		this.aboutTheCompany() +
+		this.aboutTheCompany(currentObject) +
 			'<p>&nbsp;</p>' +
-		this.businessWithAsx() +
+		this.businessWithAsx(currentObject) +
 			'<p>&nbsp;</p>' +
-		this.financialHighlights() +
+		this.financialHighlights(currentObject) +
 			'<p>&nbsp;</p>' +
-		this.liquidityRatio();
+		this.liquidityRatio(currentObject);
 		
 		return cellComponent;
 
 	},
-	cell_11: function()
-	{//Financial Data Table
-		
+	cell_11: function(currentObject) //Financial Data Table
+	{
+			var currentYear = '12/31/9999';
+			var prevYear = '12/31/9999';
+		if(currentObject)
+		{
+			//get financial dates and format it
+			currentYear = new GlideDate();
+			currentYear.setValue(currentObject.financial_metric_current_year.fiscal_year_end_date);
+			currentYear = currentYear.getByFormat("MM/dd/yyyy");
+			prevYear = new GlideDate();
+			prevYear.setValue(currentObject.financial_metric_previous_year.fiscal_year_end_date);
+			prevYear = prevYear.getByFormat("MM/dd/yyyy");
+		}
+		var cellFields =
+			[
+				{'fieldName':'cash','cellType':'normal'},
+				{'fieldName':'accounts_receivable','cellType':'normal'},
+				{'fieldName':'inventory','cellType':'normal'},
+				{'fieldName':'total_debt','cellType':'normal'},
+				
+				{'fieldName': 'blank','cellType':'blankRow'},
+				
+				{'fieldName':'current_assets','cellType':'normal'},
+				{'fieldName':'current_liabilities','cellType':'normal'},
+				
+				{'fieldName':'working_capital','cellType':'blue'},
+				
+				{'fieldName': 'blank','cellType':'blankRow'},
+				
+				{'fieldName':'total_assets','cellType':'normal'},
+				{'fieldName':'total_liability','cellType':'normal'},
+				
+				{'fieldName':'net_worth','cellType':'blue'},
+				
+				{'fieldName': 'blank','cellType':'blankRow'},
+
+				{'fieldName':'net_sales','cellType':'normal'},
+				{'fieldName':'net_fixed_assets','cellType':'normal'},
+				
+				{'fieldName': 'blank','cellType':'blankRow'},
+				
+				{'fieldName':'net_income','cellType':'normal'},
+				{'fieldName':'income_tax','cellType':'normal'},
+				{'fieldName':'interest_expenses','cellType':'normal'},
+				{'fieldName':'interest_investment_income','cellType':'normal'},
+				{'fieldName':'depreciation','cellType':'normal'},
+				
+				{'fieldName':'ebitda','cellType':'blue'},
+				
+				{'fieldName': 'blank','cellType':'blankRow'},
+
+				{'fieldName':'cash_flow_from_operations','cellType':'normal'},
+				{'fieldName':'capital_expenditures','cellType':'normal'},
+				
+				{'fieldName':'free_cash_flow','cellType':'blue'},
+
+				{'fieldName': 'blank','cellType':'blankRow'},
+
+				{'fieldName':'current_ratio','cellType':'normal'},
+				{'fieldName':'quick_ratio','cellType':'normal'},
+				{'fieldName':'cash_ratio','cellType':'normal'},
+
+			];
 		var normalCell = this.solidBorder + this.textSize + this.textFont;
 		var blueCell = this.cellBgBlue + normalCell;
 		var normalEmptyRow =
@@ -122,189 +222,82 @@ PreviewRequest_CreditCustomer.prototype = {
 					'<td style="text-align: center; '+ normalCell + '" colspan="4">' + this.boldText('Financial Data') + '</td>' +
 				'</tr>' +
 				'<tr>' +
+
 					'<td style=' + blueCell +'>' + this.boldText('Financial Metrics') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('12/31/2017') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('12/31/2016') + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText(currentYear) + '</td>' +
+					'<td style=' + blueCell + '>' + this.boldText(prevYear) + '</td>' +
 					'<td style=' + blueCell + '>' + this.boldText('Diff&nbsp;%') + '</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Cash</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Accounts Receivable</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Inventory</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Total Debt</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				//--- insert normal empty row here
-				normalEmptyRow +
+				'</tr>';
+		if(currentObject)
+		{
+			//browse cellfields
+			//retained the try catch to still send the email even if an error occurs
+			try
+			{
+				for(var ctr = 0; ctr < cellFields.length; ctr++)
+				{
+					if(cellFields[ctr].cellType == 'blankRow')
+					{
+						subTable = subTable + normalEmptyRow;
+						continue;
+						//required to continue as the script will have error if fieldName does not exist on the table
+					}
+					//fieldName is necessary to be on the referenced table
+					var fieldLabel = currentObject.financial_metric_current_year[cellFields[ctr].fieldName].getLabel();
+					var currentYearRaw = currentObject.financial_metric_current_year[cellFields[ctr].fieldName];
+					var prevYearRaw = currentObject.financial_metric_previous_year[cellFields[ctr].fieldName];
+					var currentYearValue = currentYearRaw.getDisplayValue();
+					var previousYearValue = prevYearRaw.getDisplayValue();
 
-				'<tr>' +
-					'<td style=' + normalCell +'>Current Assets</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Current Liabilities</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + blueCell +'>' + this.boldText('Working Capital') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
-				'</tr>' +
-				//--- insert normal empty row here
-				normalEmptyRow +
-			
-				'<tr>' +
-					'<td style=' + normalCell +'>Total Assets</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Total Liability</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + blueCell +'>' + this.boldText('Net Worth') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
-				'</tr>' +
-				//--- insert normal empty row here
-				normalEmptyRow +
 
-				'<tr>' +
-					'<td style=' + normalCell +'>Net Sales</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Net Fixed Assets</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				//--- insert normal empty row here
-				normalEmptyRow +
+					if(cellFields[ctr].cellType == 'normal')
+					{
+						subTable = subTable +
+							'<tr>' +
+							'<td style=' + normalCell +'>' + fieldLabel + '</td>' +
+							'<td style=' + normalCell + '>' + currentYearValue + '</td>' +
+							'<td style=' + normalCell + '>' + previousYearValue + '</td>' +
+							'<td style=' + normalCell + '>' + this.getDiffPercent(currentYearRaw,prevYearRaw) + '%</td>' +
+							'</tr>';					
+						continue;
+					}
+					if(cellFields[ctr].cellType == 'blue')
+					{
+						subTable = subTable +
+							'<tr>' +
+							'<td style=' + blueCell +'>' + this.boldText(fieldLabel) + '</td>' +
+							'<td style=' + blueCell + '>' + this.boldText(currentYearValue) + '</td>' +
+							'<td style=' + blueCell + '>' + this.boldText(previousYearValue) + '</td>' +
+							'<td style=' + blueCell + '>' + this.boldText(this.getDiffPercent(currentYearRaw,prevYearRaw) +' %') + '</td>' +
+							'</tr>';
+						continue;
+					}
+				}				
+			}
+			catch(e)
+			{
+				//display error if have one
+				subTable = subTable +
+					"<tr><td colspan=4>" + e + "</td></tr>";
+			}
 
-				'<tr>' +
-					'<td style=' + normalCell +'>Net Income</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Income Tax</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Interest Expenses</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Interest/Investment Income</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Depreciation</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + blueCell +'>' + this.boldText('EBITDA') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
-				'</tr>' +
-				//--- insert normal empty row here
-				normalEmptyRow +
-			
-				'<tr>' +
-					'<td style=' + normalCell +'>Cash Flow from Operations</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Capital Expenditures</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + blueCell +'>' + this.boldText('Free Cash Flow') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('$123,456.78') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('0%') + '</td>' +
-				'</tr>' +
-				//--- insert normal empty row here
-				normalEmptyRow +
-			
-				'<tr>' +
-					'<td style=' + normalCell +'>Capital Expenditures</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Current Ratio</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Quick Ratio</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +
-				'<tr>' +
-					'<td style=' + normalCell +'>Cash Ratio</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>$123,456.78</td>' +
-					'<td style=' + normalCell + '>0%</td>' +
-				'</tr>' +			
+ 		}
+		//close table before returning
+		subTable = subTable + 
 			'</tbody>' +
 		'</table>';
-		
+
 		return subTable;
 	},
-	cell_21: function()
-	{//Scores and Rating Table
+	cell_21: function(currentObject) //Scores and Rating Table
+	{
 		var normalCell = this.solidBorder + this.textSize + this.textFont;
 		var blueCell = this.cellBgBlue + normalCell;
-		
+
+		if(currentObject)
+		{
+			//fill in details
+		}
 		var subTable =
 		'<table cellspacing="0" cellpadding="1" style="width: 100%; ' +this.solidBorder + '">' +
 			'<tbody>' +
@@ -312,48 +305,60 @@ PreviewRequest_CreditCustomer.prototype = {
 				'<td style=' + blueCell + '>' + this.boldText('Scores &amp; Rating') + '</td>' +
 				'<td style=' + blueCell + '>' + this.boldText('Grade') + '</td>' +
 				'<td style=' + blueCell + '>' + this.boldText('Analysis') + '</td>' +
-			'</tr>' +
+			'</tr>';
+		//use this to be able to send the email and track for errors
+		try
+		{
+			subTable = subTable +
 			'<tr>' +
 				'<td style=' + normalCell + '>' + 'Frisk Score' + '</td>' +
-				'<td style=' + normalCell + '>' + '10' + '</td>' +
-				'<td style=' + normalCell + '>' + 'Probability of Bankruptcy range: 0.00% - 10.52%' + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["frisk_score_analysis"]) + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["frisk_score_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style=' + normalCell + '>' + 'Z" Score' + '</td>' +
-				'<td style=' + normalCell + '>' + '4.4' + '</td>' +
-				'<td style=' + normalCell + '>' + 'Financially Sound' + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["z_score_analysis"]) + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["z_score_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style=' + normalCell + '>' + "Moody's" + '</td>' +
-				'<td style=' + normalCell + '>' + 'A1' + '</td>' +
-				'<td style=' + normalCell + '>' + 'Stable' + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["moodys_analysis"]) + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["moodys_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style=' + normalCell + '>' + 'Fitch' + '</td>' +
-				'<td style=' + normalCell + '>' + 'A+' + '</td>' +
-				'<td style=' + normalCell + '>' + 'Negative (deteriorating trend)' + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["fitch_analysis"]) + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["fitch_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style=' + normalCell + '>' + 'DBT Index' + '</td>' +
-				'<td style=' + normalCell + '>' + '9' + '</td>' +
-				'<td style=' + normalCell + '>' + '0 - 10 Days Beyond Terms' + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["dbt_analysis"]) + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["dbt_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style=' + normalCell + '>' + 'PAYDEX' + '</td>' +
-				'<td style=' + normalCell + '>' + '72' + '</td>' +
-				'<td style=' + normalCell + '>' + 'Paying 12 Days past due' + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["paydex_analysis"]) + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["paydex_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style=' + normalCell + '>' + 'Fin Stress' + '</td>' +
-				'<td style=' + normalCell + '>' + '20' + '</td>' +
-				'<td style=' + normalCell + '>' + 'Moderate to High Risk of severe financial stress' + '</td>' +
-			'</tr>' +
+				'<td style=' + normalCell + '>' + String(currentObject["fin_stress_analysis"]) + '</td>' +
+				'<td style=' + normalCell + '>' + String(currentObject["fin_stress_grade"]) + '</td>' +
+			'</tr>';			
+		}
+		catch(e)
+		{
+			subTable = subTable +
+			"<tr><td>" + e + "</td></tr>";
+		}
+
+			subTable = subTable +
 			'</tbody>' +
 		'</table>';
 		
 		return subTable;
 	},
-	cell_30: function()
+	cell_30: function() //Recommendation Label
 	{
 		var subPart = 
 		'<td style=' + this.cellBgGray + '>' +
@@ -362,11 +367,23 @@ PreviewRequest_CreditCustomer.prototype = {
 		
 		return subPart;
 	},
-	cell_31: function()
+	cell_31: function(currentObject) //Recommendation Value
 	{
+		
 		var subPart = 
-		'<td style=' + this.textFont + this.textSize + '>' +
-		'<p align="justify">Based on the above information, recommendation is to decrease the credit limit to $5M to accommodate orders.</p>' +
+		'<td style=' + this.textFont + this.textSize + '>';
+		try
+		{
+			subPart = subPart +
+				'<p align="justify">' + currentObject["recommendation"] + '</p>';			
+		}
+		catch(e)
+		{
+			subPart = subPart + "<p>" + e + "</p>";
+		}
+
+		
+		subPart = subPart +
 		'</td>';
 		
 		return subPart;
@@ -374,8 +391,14 @@ PreviewRequest_CreditCustomer.prototype = {
 	//----------------------------------------------------------------------------------------------------
 	//--- Cell 10 ELEMENT FUNCTIONS ----------------------------------------------------------------------
 	//----------------------------------------------------------------------------------------------------
-	aboutTheCompany: function()
+	aboutTheCompany: function(currentObject)
 	{
+		var aboutTheCom = 'Test company description';
+		if(currentObject)
+		{
+			//fill in about the company details
+			aboutTheCom = String(currentObject.credit_customer.about_the_company);
+		}
 		var subTable =
 		'<table style="width: 100%;">' +
 			'<tbody>' +
@@ -386,7 +409,9 @@ PreviewRequest_CreditCustomer.prototype = {
 			'</tr>' +
 			'<tr>' +
 				'<td>' +
-					"<p style=" + this.textSize + this.textFont + " align='justify'>This is an example of a company description. It tells about things people would read when they are curios about the company's details. You may experience things that are not usually experienced.</p>" +
+					"<p style=" + this.textSize + this.textFont + " align='justify'>" +
+					aboutTheCom +
+					"</p>" +
 				'</td>' +
 			'</tr>' +
 			'</tbody>' +
@@ -394,8 +419,19 @@ PreviewRequest_CreditCustomer.prototype = {
 		
 		return subTable;		
 	},	
-	businessWithAsx: function()
+	businessWithAsx: function(currentObject)
 	{
+		var customerSince = 'yyyy';
+		var payHabit = 'SamplePayHabit';
+		var currentYear = '9999';
+		if(currentObject)
+		{
+			customerSince = String(currentObject.credit_customer.customer_since);
+			payHabit = String(currentObject.credit_customer.pay_habit);
+			currentYear = new GlideDate();
+			currentYear.setValue(currentObject.financial_metric_current_year.fiscal_year_end_date);
+			currentYear = currentYear.getYearNoTZ();
+		}
 		var underLineLabel = this.textSize + this.textFont + this.underlineText;
 		var subTable =
 		'<table>' +
@@ -405,12 +441,12 @@ PreviewRequest_CreditCustomer.prototype = {
 				'</tr>' +
 				'<tr>' +
 				'<td>' + 
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Customer Since:') + '&nbsp;yyyy</p>' +
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('yyyy Forecasted Sales:') + '&nbsp;$20M</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Customer Since:') + '&nbsp;' + customerSince + '</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText(currentYear + ' Forecasted Sales:') + '&nbsp;$20M</p>' +
 					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Prior Year Sales:') + '&nbsp;$30M</p>' +
 					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Current Payment Terms:') + '&nbsp;Net 30 &amp; Net 60</p>' +
 					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Current Exposure:') + '&nbsp;$2.3M</p>' +
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Pay Habit:') + '&nbsp;Slow</p>' +
+					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Pay Habit:') + '&nbsp;' + payHabit + '</p>' +
 				'</td>' +
 				'</tr>' +
 			'</tbody>' +
@@ -418,26 +454,34 @@ PreviewRequest_CreditCustomer.prototype = {
 		
 		return subTable;
 	},
-	financialHighlights: function()
+	financialHighlights: function(currentObject)
 	{
 		var underLineLabel = this.textSize + this.textFont + this.underlineText;
-
+		var financialHigh = 'This is an example of a finance highlight';
+		var currentYear = '9999';
+		var prevYear = '8888';
+		if(currentObject)
+		{
+			financialHigh = String(currentObject.credit_customer.financial_highlights);
+			currentYear = new GlideDate();
+			currentYear.setValue(currentObject.financial_metric_current_year.fiscal_year_end_date);
+			currentYear = currentYear.getYearNoTZ();
+			prevYear = new GlideDate();
+			prevYear.setValue(currentObject.financial_metric_previous_year.fiscal_year_end_date);
+			prevYear = prevYear.getYearNoTZ();
+		}
 		var subTable =
 		'<table style="width: 100%;">' +
 			'<tbody>' +
 			'<tr>' +
 				'<td>' + 
-					'<span style=' + underLineLabel + '>' + this.boldText('Financial Highlights for 2016 - 2017:') + '</span>' + 
+				'<span style=' + underLineLabel + '>' + this.boldText('Financial Highlights for '+prevYear+' - '+currentYear+':') + '</span>' + 
 				'</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td>' +
 				"<p style=" + this.textSize + this.textFont + " align='justify'>" +
-			'Sales for the 12 months ended 12/31/2017 increased by 12% to $748 from $668 for the same period last year.' +
-			'Net income for the 12 months ended 12/31/2017 increased by 50% to 70% from $58 for the same period last year.' +
-			'EBITDA for the last 12 months ended 12/31/2017 increased by 16% to $148 from $128  for the same period last year.' +
-			'Free cash flow: $68' +
-			'Total Net Worth: $398' +
+					financialHigh +
 				"</p>" +
 				'</td>' +
 			'</tr>' +
@@ -446,8 +490,13 @@ PreviewRequest_CreditCustomer.prototype = {
 		
 		return subTable;		
 	},
-	liquidityRatio: function()
+	liquidityRatio: function(currentObject)
 	{
+		var liquidityRatio = 'A sample description of the ratios';
+		if(currentObject)
+		{
+			liquidityRatio = String(currentObject.credit_customer.liquidity_ratio);
+		}
 		var underLineLabel = this.textSize + this.textFont + this.underlineText;
 
 		var subTable =
@@ -461,17 +510,38 @@ PreviewRequest_CreditCustomer.prototype = {
 			'<tr>' +
 				'<td>' +
 				"<p style=" + this.textSize + this.textFont + " align='justify'>" +
-			'Current Ratio: which indicates that company has a strong liquidity position.' +
-			'Quick Ratio: indicates that the company is very liquid in clearing the short term obligation without depending on their inventory.' +
-			'Cash Ratio: indicates that the company has very low cash reserves to cover the its current debt.' +
+					liquidityRatio +
 				"</p>" +
 				'</td>' +
 			'</tr>' +
 			'</tbody>' +
 		'</table>';
 		
-		return subTable;		
-	},	
+		return subTable;
+	},
+	//----------------------------------------------------------------------------------------------------
+	//--- OTHER FUNCTIONS --------------------------------------------------------------------------------
+	//----------------------------------------------------------------------------------------------------
+	getDiffPercent: function(currentYearValue,prevYearValue)
+	{
+		var result_value = '';
+		currentYearValue = Number(currentYearValue);
+		prevYearValue = Number(prevYearValue);
+		if(currentYearValue == prevYearValue)
+			result_value = 0;
+		else if(prevYearValue == 0 && currentYearValue < 0)
+		{
+			result_value = 100;
+		}
+		else
+		{
+			result_value = (((currentYearValue - prevYearValue)/prevYearValue) * 100);
+			result_value = Math.round(result_value);			
+		}
+
+		
+		return result_value;
+	},
 	type: 'PreviewRequest_CreditCustomer'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -479,7 +549,7 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_created_on>2019-07-16 14:17:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ce9cc8bfdb2677003098757a8c9619b0</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>117</sys_mod_count>
         <sys_name>PreviewRequest_CreditCustomer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy>read</sys_policy>
@@ -487,6 +557,6 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_script_include_ce9cc8bfdb2677003098757a8c9619b0</sys_update_name>
         <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-18 12:37:06</sys_updated_on>
+        <sys_updated_on>2019-07-24 14:20:45</sys_updated_on>
     </sys_script_include>
 </record_update>

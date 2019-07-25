@@ -20,7 +20,7 @@
         <element label="Inventory" max_length="200" name="inventory" type="currency"/>
         <element label="Net Debt" max_length="200" name="net_debt" type="currency"/>
         <element label="Net Debt / EBITDA Ratio" max_length="200" name="net_debt_ebitda_ratio" type="float"/>
-        <element label="Net FIxed Assets" max_length="200" name="net_fixed_assets" type="currency"/>
+        <element label="Net Fixed Assets" max_length="200" name="net_fixed_assets" type="currency"/>
         <element label="Net Income" max_length="200" name="net_income" type="currency"/>
         <element label="Net Sales" max_length="200" name="net_sales" type="currency"/>
         <element label="Net Worth" max_length="200" name="net_worth" type="currency"/>

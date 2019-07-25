@@ -3,10 +3,15 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>edge_encryption_enabled=true</attributes>
+        <attributes/>
         <audit>false</audit>
-        <calculation/>
-        <choice>0</choice>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
         <choice_field/>
         <choice_table/>
         <column_label>Sales Forecast</column_label>
@@ -46,10 +51,10 @@
         <spell_check>false</spell_check>
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
-        <sys_created_by>system</sys_created_by>
-        <sys_created_on>2019-07-09 19:24:34</sys_created_on>
+        <sys_created_by>A242291</sys_created_by>
+        <sys_created_on>2019-07-23 14:49:03</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>df8411a9dbeab3003098757a8c9619d1</sys_id>
+        <sys_id>a4bbd446dbbab3003098757a8c96198b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Sales Forecast</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
@@ -57,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_dictionary_x_adsi_cust_credit_customer_credit_review_sales_forecast</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-07-09 19:24:34</sys_updated_on>
+        <sys_updated_by>A242291</sys_updated_by>
+        <sys_updated_on>2019-07-23 14:49:03</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

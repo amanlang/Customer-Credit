@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function myFunction()
+{
+	alert("HAHA");
+	document.getElementById("samBo").innerHTML = g_scratchpad.htmlTemplate;
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>x_adsi_cust_credit_Test_Preview.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<div id="samBo">
+		<button onclick="myFunction()">Click me</button>
+	</div>
+</j:jelly>]]></html>
+        <name>Test_Preview</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>A242291</sys_created_by>
+        <sys_created_on>2019-07-24 13:28:03</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2b9119dedb7af3003098757a8c96199e</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Test_Preview</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_ui_page_2b9119dedb7af3003098757a8c96199e</sys_update_name>
+        <sys_updated_by>A242291</sys_updated_by>
+        <sys_updated_on>2019-07-24 14:15:35</sys_updated_on>
+    </sys_ui_page>
+</record_update>

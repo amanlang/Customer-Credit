@@ -5,7 +5,7 @@
         <client>true</client>
         <client_script_v2/>
         <comments>Click to generate an HTML preview of the request.</comments>
-        <condition/>
+        <condition>!current.isNewRecord()</condition>
         <form_action>true</form_action>
         <form_button>true</form_button>
         <form_button_v2>false</form_button_v2>
@@ -28,19 +28,20 @@
         <order>100</order>
         <script><![CDATA[function executePreview()
 {
-	var tblStart = '<table border="1">';
-	var tblBody = '';
-	var tblEnd = '</table>';
-	
-	tblBody =
-		'<tr>' +
-			'<td>' +
-				'<p>' +
-					'Sample Table' +
-				'</p>' +
-			'</td>' +
-		'</tr>';
-	g_form.setValue('request_preview', tblStart + tblBody + tblEnd);
+	// 	var tblStart = '<table border="1">';
+	// 	var tblBody = '';
+	// 	var tblEnd = '</table>';
+
+	// 	tblBody =
+	// 		'<tr>' +
+	// 			'<td>' +
+	// 				'<p>' +
+	// 					'Sample Table' +
+	// 				'</p>' +
+	// 			'</td>' +
+	// 		'</tr>';
+	 	g_form.setValue('request_preview', g_scratchpad.htmlTemplate);
+
 }]]></script>
         <show_insert>true</show_insert>
         <show_multiple_update>false</show_multiple_update>
@@ -53,7 +54,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>7598b382dbe63700959bdd0b5e96193b</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_name>Preview Approval Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
@@ -62,7 +63,7 @@
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_ui_action_7598b382dbe63700959bdd0b5e96193b</sys_update_name>
         <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-11 20:45:56</sys_updated_on>
+        <sys_updated_on>2019-07-24 14:20:11</sys_updated_on>
         <table>x_adsi_cust_credit_customer_credit_review</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
