@@ -31,13 +31,6 @@ PreviewRequest_CreditCustomer.prototype = {
 	//---------------------------------------------------------------------------------------
 	generatePreview: function(currentObject)
 	{
-		//declare needed things
-		var solidBorder = 'border: 1px solid #000000;';
-		var boldText = 'font-weight: bold;';
-		var textSize = 'font-size: 10pt;';
-		var textFont = 'font-family: verdana;';
-		var cellBgBlue = 'background-color: #a1d8f7;';
-		var cellBgGray = 'background-color: #adadad;';
 		//main table creation
 		//cell contains the following:
 		//----------------------------
@@ -104,22 +97,22 @@ PreviewRequest_CreditCustomer.prototype = {
 		var subTable = 
 		"<table>" +
 			"<tr>" + 
-				"<td style=" +this.textSize + this.textFont + ">" +
+				'<td style="' +this.textSize + this.textFont + '">' +
 					"Below is the credit review for " + creditCustomer + " to decrease the credit limit to $5M from $10M." +
 				"</td>" +
 			"</tr>" +
 			"<tr>" +
-				"<td style=" +this.textSize + this.textFont + ">" +
+				'<td style="' +this.textSize + this.textFont + '">' +
 					this.boldText("GBP Number:") + ": " +"</span>"+ gbpNumber +
 				"</td>" +
 			"</tr>" +
 			"<tr>" +
-				"<td style=" +this.textSize + this.textFont + ">" +
+				'<td style="' +this.textSize + this.textFont + '">' +
 					this.boldText("Active Child Accounts:") +
 				"</td>" +
 			"</tr>" +
 			"<tr>" +
-				"<td style=" +this.textSize + this.textFont + ">" +
+				'<td style="' +this.textSize + this.textFont + '">' +
 				accName +
 				"</td>" +
 			"</tr>" +
@@ -209,10 +202,10 @@ PreviewRequest_CreditCustomer.prototype = {
 		var blueCell = this.cellBgBlue + normalCell;
 		var normalEmptyRow =
 			'<tr>' +
-					'<td style=' + normalCell +'>&nbsp;</td>' +
-					'<td style=' + normalCell + '>&nbsp;</td>' +
-					'<td style=' + normalCell + '>&nbsp;</td>' +
-					'<td style=' + normalCell + '>&nbsp;</td>' +
+					'<td style="' + normalCell + '">&nbsp;</td>' +
+					'<td style="' + normalCell + '">&nbsp;</td>' +
+					'<td style="' + normalCell + '">&nbsp;</td>' +
+					'<td style="' + normalCell + '">&nbsp;</td>' +
 			'</tr>';
 		
 		var subTable =
@@ -223,10 +216,10 @@ PreviewRequest_CreditCustomer.prototype = {
 				'</tr>' +
 				'<tr>' +
 
-					'<td style=' + blueCell +'>' + this.boldText('Financial Metrics') + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText(currentYear) + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText(prevYear) + '</td>' +
-					'<td style=' + blueCell + '>' + this.boldText('Diff&nbsp;%') + '</td>' +
+					'<td style="' + blueCell +'">' + this.boldText('Financial Metrics') + '</td>' +
+					'<td style="' + blueCell + '">' + this.boldText(currentYear) + '</td>' +
+					'<td style="' + blueCell + '">' + this.boldText(prevYear) + '</td>' +
+					'<td style="' + blueCell + '">' + this.boldText('Diff&nbsp;%') + '</td>' +
 				'</tr>';
 		if(currentObject)
 		{
@@ -254,10 +247,10 @@ PreviewRequest_CreditCustomer.prototype = {
 					{
 						subTable = subTable +
 							'<tr>' +
-							'<td style=' + normalCell +'>' + fieldLabel + '</td>' +
-							'<td style=' + normalCell + '>' + currentYearValue + '</td>' +
-							'<td style=' + normalCell + '>' + previousYearValue + '</td>' +
-							'<td style=' + normalCell + '>' + this.getDiffPercent(currentYearRaw,prevYearRaw) + '%</td>' +
+							'<td style="' + normalCell + '">' + fieldLabel + '</td>' +
+							'<td style="' + normalCell + '">' + currentYearValue + '</td>' +
+							'<td style="' + normalCell + '">' + previousYearValue + '</td>' +
+							'<td style="' + normalCell + '">' + this.getDiffPercent(currentYearRaw,prevYearRaw) + '%</td>' +
 							'</tr>';					
 						continue;
 					}
@@ -265,10 +258,10 @@ PreviewRequest_CreditCustomer.prototype = {
 					{
 						subTable = subTable +
 							'<tr>' +
-							'<td style=' + blueCell +'>' + this.boldText(fieldLabel) + '</td>' +
-							'<td style=' + blueCell + '>' + this.boldText(currentYearValue) + '</td>' +
-							'<td style=' + blueCell + '>' + this.boldText(previousYearValue) + '</td>' +
-							'<td style=' + blueCell + '>' + this.boldText(this.getDiffPercent(currentYearRaw,prevYearRaw) +' %') + '</td>' +
+							'<td style="' + blueCell + '">' + this.boldText(fieldLabel) + '</td>' +
+							'<td style="' + blueCell + '">' + this.boldText(currentYearValue) + '</td>' +
+							'<td style="' + blueCell + '">' + this.boldText(previousYearValue) + '</td>' +
+							'<td style="' + blueCell + '">' + this.boldText(this.getDiffPercent(currentYearRaw,prevYearRaw) +' %') + '</td>' +
 							'</tr>';
 						continue;
 					}
@@ -302,48 +295,48 @@ PreviewRequest_CreditCustomer.prototype = {
 		'<table cellspacing="0" cellpadding="1" style="width: 100%; ' +this.solidBorder + '">' +
 			'<tbody>' +
 			'<tr>' +
-				'<td style=' + blueCell + '>' + this.boldText('Scores &amp; Rating') + '</td>' +
-				'<td style=' + blueCell + '>' + this.boldText('Grade') + '</td>' +
-				'<td style=' + blueCell + '>' + this.boldText('Analysis') + '</td>' +
+				'<td style="' + blueCell + '">' + this.boldText('Scores &amp; Rating') + '</td>' +
+				'<td style="' + blueCell + '">' + this.boldText('Grade') + '</td>' +
+				'<td style="' + blueCell + '">' + this.boldText('Analysis') + '</td>' +
 			'</tr>';
 		//use this to be able to send the email and track for errors
 		try
 		{
 			subTable = subTable +
 			'<tr>' +
-				'<td style=' + normalCell + '>' + 'Frisk Score' + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["frisk_score_analysis"]) + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["frisk_score_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + 'Frisk Score' + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["frisk_score_analysis"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["frisk_score_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
-				'<td style=' + normalCell + '>' + 'Z" Score' + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["z_score_analysis"]) + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["z_score_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + 'Z" Score' + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["z_score_analysis"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["z_score_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
-				'<td style=' + normalCell + '>' + "Moody's" + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["moodys_analysis"]) + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["moodys_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + "Moody's" + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["moodys_analysis"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["moodys_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
-				'<td style=' + normalCell + '>' + 'Fitch' + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["fitch_analysis"]) + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["fitch_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + 'Fitch' + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["fitch_analysis"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["fitch_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
-				'<td style=' + normalCell + '>' + 'DBT Index' + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["dbt_analysis"]) + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["dbt_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + 'DBT Index' + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["dbt_analysis"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["dbt_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
-				'<td style=' + normalCell + '>' + 'PAYDEX' + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["paydex_analysis"]) + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["paydex_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + 'PAYDEX' + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["paydex_analysis"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["paydex_grade"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
-				'<td style=' + normalCell + '>' + 'Fin Stress' + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["fin_stress_analysis"]) + '</td>' +
-				'<td style=' + normalCell + '>' + String(currentObject["fin_stress_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + 'Fin Stress' + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["fin_stress_analysis"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["fin_stress_grade"]) + '</td>' +
 			'</tr>';			
 		}
 		catch(e)
@@ -361,8 +354,8 @@ PreviewRequest_CreditCustomer.prototype = {
 	cell_30: function() //Recommendation Label
 	{
 		var subPart = 
-		'<td style=' + this.cellBgGray + '>' +
-		'<p><span style=' + this.textFont + this.textSize + '>'+this.boldText('Recommendation')+'</span></p>' +
+		'<td style="' + this.cellBgGray + '">' +
+		'<p><span style="' + this.textFont + this.textSize + '">'+this.boldText('Recommendation')+'</span></p>' +
 		'</td>';
 		
 		return subPart;
@@ -371,7 +364,7 @@ PreviewRequest_CreditCustomer.prototype = {
 	{
 		
 		var subPart = 
-		'<td style=' + this.textFont + this.textSize + '>';
+		'<td style="' + this.textFont + this.textSize + '">';
 		try
 		{
 			subPart = subPart +
@@ -404,12 +397,12 @@ PreviewRequest_CreditCustomer.prototype = {
 			'<tbody>' +
 			'<tr>' +
 				'<td>' + 
-					'<span style=' + this.textSize + this.textFont + '>' + this.boldText('About the company:') + '</span>' + 
+					'<span style="' + this.textSize + this.textFont + '">' + this.boldText('About the company:') + '</span>' + 
 				'</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td>' +
-					"<p style=" + this.textSize + this.textFont + " align='justify'>" +
+					'<p style="'+ this.textSize + this.textFont + '" align="justify">' +
 					aboutTheCom +
 					"</p>" +
 				'</td>' +
@@ -437,16 +430,16 @@ PreviewRequest_CreditCustomer.prototype = {
 		'<table>' +
 			'<tbody>' +
 				'<tr>' +
-					'<td style=' + underLineLabel + '>' + this.boldText('Business With AdvanSix:') + '</td>' +
+					'<td style="' + underLineLabel + '">' + this.boldText('Business With AdvanSix:') + '</td>' +
 				'</tr>' +
 				'<tr>' +
 				'<td>' + 
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Customer Since:') + '&nbsp;' + customerSince + '</p>' +
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText(currentYear + ' Forecasted Sales:') + '&nbsp;$20M</p>' +
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Prior Year Sales:') + '&nbsp;$30M</p>' +
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Current Payment Terms:') + '&nbsp;Net 30 &amp; Net 60</p>' +
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Current Exposure:') + '&nbsp;$2.3M</p>' +
-					'<p style=' +this.textSize + this.textFont + '>' + this.boldText('Pay Habit:') + '&nbsp;' + payHabit + '</p>' +
+					'<p style="' +this.textSize + this.textFont + '">' + this.boldText('Customer Since:') + '&nbsp;' + customerSince + '</p>' +
+					'<p style="' +this.textSize + this.textFont + '">' + this.boldText(currentYear + ' Forecasted Sales:') + '&nbsp;$20M</p>' +
+					'<p style="' +this.textSize + this.textFont + '">' + this.boldText('Prior Year Sales:') + '&nbsp;$30M</p>' +
+					'<p style="' +this.textSize + this.textFont + '">' + this.boldText('Current Payment Terms:') + '&nbsp;Net 30 &amp; Net 60</p>' +
+					'<p style="' +this.textSize + this.textFont + '">' + this.boldText('Current Exposure:') + '&nbsp;$2.3M</p>' +
+					'<p style="' +this.textSize + this.textFont + '">' + this.boldText('Pay Habit:') + '&nbsp;' + payHabit + '</p>' +
 				'</td>' +
 				'</tr>' +
 			'</tbody>' +
@@ -475,12 +468,12 @@ PreviewRequest_CreditCustomer.prototype = {
 			'<tbody>' +
 			'<tr>' +
 				'<td>' + 
-				'<span style=' + underLineLabel + '>' + this.boldText('Financial Highlights for '+prevYear+' - '+currentYear+':') + '</span>' + 
+				'<span style="' + underLineLabel + '">' + this.boldText('Financial Highlights for '+prevYear+' - '+currentYear+':') + '</span>' + 
 				'</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td>' +
-				"<p style=" + this.textSize + this.textFont + " align='justify'>" +
+				'<p style="' + this.textSize + this.textFont + '" align="justify">' +
 					financialHigh +
 				"</p>" +
 				'</td>' +
@@ -504,12 +497,12 @@ PreviewRequest_CreditCustomer.prototype = {
 			'<tbody>' +
 			'<tr>' +
 				'<td>' + 
-					'<span style=' + underLineLabel + '>' + this.boldText('Liquidity Ratio:') + '</span>' + 
+					'<span style="' + underLineLabel + '">' + this.boldText('Liquidity Ratio:') + '</span>' + 
 				'</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td>' +
-				"<p style=" + this.textSize + this.textFont + " align='justify'>" +
+				'<p style="' + this.textSize + this.textFont + '" align="justify">' +
 					liquidityRatio +
 				"</p>" +
 				'</td>' +
@@ -549,7 +542,7 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_created_on>2019-07-16 14:17:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ce9cc8bfdb2677003098757a8c9619b0</sys_id>
-        <sys_mod_count>117</sys_mod_count>
+        <sys_mod_count>123</sys_mod_count>
         <sys_name>PreviewRequest_CreditCustomer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy>read</sys_policy>
@@ -557,6 +550,6 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_script_include_ce9cc8bfdb2677003098757a8c9619b0</sys_update_name>
         <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-24 14:20:45</sys_updated_on>
+        <sys_updated_on>2019-07-26 08:58:12</sys_updated_on>
     </sys_script_include>
 </record_update>
