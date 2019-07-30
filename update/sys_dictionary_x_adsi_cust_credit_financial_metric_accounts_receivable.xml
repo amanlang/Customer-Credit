@@ -54,7 +54,7 @@
         <sys_created_by>A242291</sys_created_by>
         <sys_created_on>2019-07-01 19:42:28</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>6e474625db3673003098757a8c9619ee</sys_id>
+        <sys_id>17aabaffdb36f3003098757a8c961937</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Accounts Receivable</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
@@ -63,7 +63,7 @@
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_dictionary_x_adsi_cust_credit_financial_metric_accounts_receivable</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-07-22 09:27:59</sys_updated_on>
+        <sys_updated_on>2019-07-29 12:53:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
