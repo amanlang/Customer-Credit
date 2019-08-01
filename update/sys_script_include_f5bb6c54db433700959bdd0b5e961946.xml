@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_adsi_cust_credit.ApprovalMatrix_CreditCustomer</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>ApprovalMatrix_CreditCustomer</name>
+        <script><![CDATA[var ApprovalMatrix_CreditCustomer = Class.create();
+ApprovalMatrix_CreditCustomer.prototype = {
+    initialize: function()
+	{
+    },
+	getC2CApprover: function(currentObject)
+	{
+		var result_value = '';
+		
+		var fieldToRead = ''; //not yet specified
+		fieldToRead = Number(currentObject.credit_customer.current_year_forecasted_sales);
+		//get approver depending on the amount
+		var groupName = '';
+		var amountList =
+			[
+				100000, //  100 000 USD
+				500000, //  500 000 USD
+				1000000,//1 000 000 USD
+			];
+		//Group name starts with ["C2C Level " + (index on amountList + 1)]
+		if(fieldToRead <= amountList[0])
+			groupName = 'C2C Level 1';
+		else if(amountList[0] < fieldToRead && fieldToRead <= amountList[1])
+			groupName = 'C2C Level 2';
+		else if(amountList[1] < fieldToRead)
+			groupName = 'C2C Level 3';
+		
+		result_value = this.getGroupSysIdByName(groupName);
+		return result_value;
+		
+	},
+	getBusinessApprover: function(currentObject)
+	{
+		var result_value = '';
+		
+		var fieldToRead = ''; //not yet specified
+		fieldToRead = Number(currentObject.credit_customer.current_year_forecasted_sales);
+		//get approver depending on the amount
+
+		var amountList =
+			[
+				1000000,  //   1 000 000 USD
+				10000000  //  10 000 000 USD
+			];
+		//Group name starts with ["C2C Level " + (index on amountList + 1)]
+		if(fieldToRead <= amountList[0])
+			result_value = this.getGroupSysIdByName('C2C Level 4') + ',' + this.getGroupSysIdByName('C2C Level 5'); 
+		else if(amountList[0] < fieldToRead && fieldToRead <= amountList[1])
+			result_value = this.getGroupSysIdByName('C2C Level 6'); 
+		else if(amountList[1] < fieldToRead)
+			result_value = this.getGroupSysIdByName('C2C Level 7'); 
+		
+		return result_value;
+	},
+	getGroupSysIdByName: function(groupname)
+	{
+		var result_value = 'ERROR';
+		//query on groups table
+		var getGroup = new GlideRecord('sys_user_group');
+		if(getGroup.get('name', groupname))
+		{
+			result_value = String(getGroup.sys_id);
+		}
+		
+		return result_value;
+	},
+    type: 'ApprovalMatrix_CreditCustomer'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>A242291</sys_created_by>
+        <sys_created_on>2019-07-30 15:45:29</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>f5bb6c54db433700959bdd0b5e961946</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>ApprovalMatrix_CreditCustomer</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_script_include_f5bb6c54db433700959bdd0b5e961946</sys_update_name>
+        <sys_updated_by>A242291</sys_updated_by>
+        <sys_updated_on>2019-07-31 15:47:00</sys_updated_on>
+    </sys_script_include>
+</record_update>
