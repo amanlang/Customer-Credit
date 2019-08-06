@@ -62,12 +62,26 @@ ApprovalMatrix_CreditCustomer.prototype = {
 	},
 	getGroupSysIdByName: function(groupname)
 	{
+		var c2cProperty = gs.getProperty('x_adsi_cust_credit.c2c_group');
+		c2cProperty = JSON.parse(c2cProperty);
+
 		var result_value = 'ERROR';
 		//query on groups table
 		var getGroup = new GlideRecord('sys_user_group');
-		if(getGroup.get('name', groupname))
+		getGroup.addQuery('name', groupname);
+		getGroup.addActiveQuery();
+		getGroup.query();
+		//gets the group sys_id if group is available by name and is active=true, and unique
+		if(getGroup.next() && getGroup.getRowCount() == 1)
 		{
 			result_value = String(getGroup.sys_id);
+		}
+		else
+		{
+			//get value on property
+			if(c2cProperty[groupname])
+				result_value = c2cProperty[groupname];
+			//else, error
 		}
 		
 		return result_value;
@@ -79,7 +93,7 @@ ApprovalMatrix_CreditCustomer.prototype = {
         <sys_created_on>2019-07-30 15:45:29</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>f5bb6c54db433700959bdd0b5e961946</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_name>ApprovalMatrix_CreditCustomer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy>read</sys_policy>
@@ -87,6 +101,6 @@ ApprovalMatrix_CreditCustomer.prototype = {
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_script_include_f5bb6c54db433700959bdd0b5e961946</sys_update_name>
         <sys_updated_by>A242291</sys_updated_by>
-        <sys_updated_on>2019-07-31 15:47:00</sys_updated_on>
+        <sys_updated_on>2019-08-06 13:43:03</sys_updated_on>
     </sys_script_include>
 </record_update>
