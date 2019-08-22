@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Customer Credit Approval">a79d0ae7db577700959bdd0b5e961935</application>
+        <assessment/>
+        <content_page/>
+        <device_type/>
+        <filter/>
+        <hint>Credit Customer Review Approval requests</hint>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>Credit Customer Review</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>x_adsi_cust_credit_customer_credit_review</name>
+        <order>3000</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>admin,x_adsi_cust_credit.customer_credit_limit_user</roles>
+        <survey/>
+        <survey_overwrite>true</survey_overwrite>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2019-08-22 17:15:26</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2ebc53ebdb9b7700959bdd0b5e9619a9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Credit Customer Review</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_app_module_2ebc53ebdb9b7700959bdd0b5e9619a9</sys_update_name>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2019-08-22 17:15:26</sys_updated_on>
+        <timeline_page/>
+        <title>Credit Customer Review</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>
