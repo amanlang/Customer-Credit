@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_adsi_cust_credit.utilCustomerCreditApprovalAJAX</api_name>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>utilCustomerCreditApprovalAJAX</name>
+        <script><![CDATA[var utilCustomerCreditApprovalAJAX = Class.create();
+utilCustomerCreditApprovalAJAX.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+	
+	validateLastTwoFiscalYearFinancialMetrics: function () {
+		var msgLog = 'utilCustomerCreditApprovalAJAX.validateLastTwoFiscalYearFinancialMetrics' + '\n';
+		var isValid = '';
+		try {
+		var sidCreditCustomer = this.getParameter('sysparm_sid_credit_customer');
+		msgLog += '\t' + 'sidCreditCustomer = ' + sidCreditCustomer + '\n';
+		var util = new x_adsi_cust_credit.utilCustomerCreditApproval(sidCreditCustomer);
+		msgLog += '\t' + 'util initialized' + '\n';
+		isValid = util.validateLastTwoFiscalYearFinancialMetrics(sidCreditCustomer).toString();
+			msgLog += '\t' + 'isValid = ' + isValid + '\n';
+		}
+		catch (err) {
+			msgLog += 'ERROR:  ' + err.message + '\n';
+		}  // catch
+		finally {
+			gs.info(msgLog);
+			return isValid;
+		}  // finally
+	},  // validateLastTwoFiscalYearFinancialMetrics
+	
+	type: 'utilCustomerCreditApprovalAJAX'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2019-08-23 14:52:43</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>d9244088dbabb700959bdd0b5e9619bc</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>utilCustomerCreditApprovalAJAX</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_script_include_d9244088dbabb700959bdd0b5e9619bc</sys_update_name>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2019-08-23 16:52:33</sys_updated_on>
+    </sys_script_include>
+</record_update>

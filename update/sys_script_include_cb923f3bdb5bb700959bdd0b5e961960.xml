@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_adsi_cust_credit.utilCustomerCreditApproval</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>utilCustomerCreditApproval</name>
+        <script><![CDATA[var utilCustomerCreditApproval = Class.create();
+utilCustomerCreditApproval.prototype = {
+	initialize: function(sidCreditCustomer) {
+		this.sidCreditCustomer = ((sidCreditCustomer != undefined) ? sidCreditCustomer.toString() :'');
+		this.grCreditCustomer = new GlideRecord('x_adsi_cust_credit_credit_customer');
+	},
+	
+	setCreditCustomer: function (sidCreditCustomer) {
+		this.sidCreditCustomer = sidCreditCustomer.toString();
+		var grCreditCustomer = this.getCreditCustomer(sidCreditCustomer);
+	},  // setCreditCustomer
+	
+	getCreditCustomer: function (sidCreditCustomer) {
+		if (sidCreditCustomer != undefined) {
+			this.setCreditCustomer = sidCreditCustomer.toString();
+		}  // if (sidCreditCustomer != undefined)
+		var grCreditCustomer = new GlideRecord('x_adsi_cust_credit_credit_customer');
+		grCreditCustomer.get(this.sidCreditCustomer);
+		this.grCreditCustomer = grCreditCustomer;
+		return this.grCreditCustomer;
+	},  // getCreditCustomer
+	
+	getCustomerFinancialMetrics: function (sidCreditCustomer) {
+		var msgLog = 'utilCustomerCreditApproval.getCustomerFinancialMetrics(' + sidCreditCustomer + ')' + '\n';
+		var grFinancialMetrics = new GlideRecord('x_adsi_cust_credit_financial_metric');
+		try {
+			if (sidCreditCustomer != undefined) {
+				this.setCreditCustomer(sidCreditCustomer);
+			}  // if (sidCreditCustomer != undefined)
+			msgLog += '\t' + 'this.sidCreditCustomer = ' + this.sidCreditCustomer.toString() + '\n';
+			grFinancialMetrics.addQuery('credit_company', this.sidCreditCustomer);
+			grFinancialMetrics.orderByDesc('fiscal_year_end_date');
+			grFinancialMetrics.query();
+			msgLog += '\t' + 'grFinancialMetrics.getEncodedQuery() = ' + grFinancialMetrics.getEncodedQuery() + '\n' + '\t' + 'grFinancialMetrics.getRowCount() = ' + grFinancialMetrics.getRowCount() + '\n';
+		}  //try
+		catch (err) {
+			msgLog += 'ERROR:  ' + err.message + '\n';
+		}  // catch
+		finally {
+			gs.info(msgLog);
+			return grFinancialMetrics;
+		}  // finally
+	},  // getCustomerFinancialMetrics
+	
+	validateLastTwoFiscalYearFinancialMetrics: function (sidCreditCustomer) {
+		var msgLog = 'utilCustomerCreditApproval.validateLastTwoFiscalYearFinancialMetrics(' + sidCreditCustomer + ')' + '\n';
+		var boolValidated = true;
+		msgLog += '\t' + 'boolValidated initialized:  ' + boolValidated.toString() + '\n';
+		try {
+			var fiscalYearCheck = 2;
+			msgLog += '\t' + 'fiscalYearCheck initialized:  ' + fiscalYearCheck.toString() + '\n';
+			var gdtTestMax = new GlideDateTime();
+			msgLog += '\t' + 'gdtTestMax initialized:  ' + gdtTestMax.getDisplayValue() + '\n';
+			var gdtTestMin = new GlideDateTime();
+			gdtTestMin.addYearsLocalTime(-1);
+			msgLog += '\t' + 'gdtTestMin initialized:  ' + gdtTestMin.getDisplayValue() + '\n';
+			var grFinancialMetrics = this.getCustomerFinancialMetrics(sidCreditCustomer);
+			msgLog += '\t' + 'grFinancialMetrics.getEncodedQuery() = ' + grFinancialMetrics.getEncodedQuery() + '\n' + '\t' + 'grFinancialMetrics.getRowCount() = ' + grFinancialMetrics.getRowCount() + '\n';
+			while (grFinancialMetrics.next() && (fiscalYearCheck > 0)) {
+				msgLog += '\t' + '\t' + 'fiscalYearCheck = ' + fiscalYearCheck.toString() + '\n' + '\t' + '\t' + '\t' + '\t' + 'gdtTestMax.getDisplayValue() = ' + gdtTestMax.getDisplayValue() + ' [' + gdtTestMax.getNumericValue() + ']' + '\n' + '\t' + '\t' + 'gdtTestMin.getDisplayValue() = ' + gdtTestMin.getDisplayValue() + '[' + gdtTestMin.getNumericValue() + ']' + '\n' + '\t' + '\t' + 'grFinancialMetrics.getDisplayValue("fiscal_year_end_date") = ' + grFinancialMetrics.getValue('fiscal_year_end_date') + '\n';
+				var gdtFMFYE = new GlideDateTime();
+				gdtFMFYE.setValue(grFinancialMetrics.getValue('fiscal_year_end_date'));
+				msgLog += '\t' + '\t' + 'gdtFMFYE.getDisplayValue() = ' + gdtFMFYE.getDisplayValue() + ' [' + gdtFMFYE.getNumericValue() + ']' + '\n';
+				if (!((gdtFMFYE.getNumericValue() < gdtTestMax.getNumericValue()) && (gdtFMFYE.getNumericValue() > gdtTestMin.getNumericValue()))) {
+					boolValidated = false;
+					msgLog += '\t' + '\t' + '\t' + 'boolValidated being set to ' + boolValidated.toString() + '\n';
+					break;
+				}  // gdtFMFYE.getNumericValue < gdtTestMax.getNumericValue()
+				msgLog += '\t' + '\t' + 'passed if (!((gdtFMFYE.getNumericValue() < gdtTestMax.getNumericValue()) && (gdtFMFYE.getNumericValue > gdtTestMin.getNumericValue())))' + '\n';
+				gdtTestMax.addYearsLocalTime(-1);
+				msgLog += '\t' + '\t' + 'gdtTestMax decremented: ' + gdtTestMax.getDisplayValue() + '\n';
+				gdtTestMin.addYearsLocalTime(-1);
+				msgLog += '\t' + '\t' + 'gdtTestMin decremented: ' + gdtTestMin.getDisplayValue() + '\n';
+				fiscalYearCheck--;
+				msgLog += '\t' + '\t' + 'fiscalYearCheck decremented: ' + fiscalYearCheck.toString() + '\n';
+			}  // while (grFinancialMetrics.next() && (fiscalYearCheck > 0))
+			msgLog += '\t' + 'while (grFinancialMetrics.next() && (fiscalYearCheck > 0)) completed' + '\n';
+			if (fiscalYearCheck != 0) {
+				boolValidated = false;
+				msgLog += '\t' + '\t' + '\t' + '(fiscalYearCheck) boolValidated being set to ' + boolValidated.toString() + '\n';
+			}  // if (fiscalYearCheck == 2)
+			msgLog += '\t' + 'if (fiscalYearCheck == 2) completed' + '\n';
+		}  // try
+		catch (err) {
+			msgLog += 'ERROR:  ' + err.message + '\n';
+		}  // catch
+		finally {
+			msgLog += '\t' + 'boolValidated = ' + boolValidated.toString() + '\n';
+			gs.info(msgLog);
+			return boolValidated;
+		}  // finally
+	},  // validateLastTwoFiscalYearFinancialMetrics
+	
+	type: 'utilCustomerCreditApproval'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2019-08-23 13:29:10</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>cb923f3bdb5bb700959bdd0b5e961960</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_name>utilCustomerCreditApproval</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_script_include_cb923f3bdb5bb700959bdd0b5e961960</sys_update_name>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2019-08-23 19:16:42</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script_client">
+    <sys_script_client action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applies_extended>false</applies_extended>
+        <condition/>
+        <description>Validates that there are Financial Metrics records for the last two fiscal years</description>
+        <field>credit_customer</field>
+        <global>true</global>
+        <isolate_script>true</isolate_script>
+        <messages/>
+        <name>validateLastTwoFiscalYearFinancialMetric</name>
+        <order/>
+        <script><![CDATA[function onChange(control, oldValue, newValue, isLoading, isTemplate) {
+	try {
+		if (!isLoading && newValue != '') {
+			validateLastTwoFiscalYearFinancialMetric(newValue);
+		}  // if (!isLoading && newValue != '')
+	}  // try
+	catch (err) {
+		alert('Error encountered checking for valid Financial Metrics:  ' + err.message);
+	}  // catch
+}  // onChange
+
+function validateLastTwoFiscalYearFinancialMetric (sidCreditCustomer) {
+	try {
+		var util = new GlideAjax('utilCustomerCreditApprovalAJAX');
+		util.addParam('sysparm_name', 'validateLastTwoFiscalYearFinancialMetrics');
+		util.addParam('sysparm_sid_credit_customer', sidCreditCustomer);
+		var response = util.getXML(isValid);
+	}  // try
+	catch (err) {
+		alert('Error encountered checking for valid Financial Metrics:  ' + err.message);
+	}  // catch
+}  // validateLastTwoFiscalYearFinancialMetric
+
+function isValid (response) {
+	var answer = response.responseXML.documentElement.getAttribute("answer");
+	alert('answer = ' + answer.toString());
+	if (answer == 'false') {
+		alert('There are not Financial Metrics records for the prior two fiscal years for this Credit Customer.');
+		try {
+			var gmfFinancialMetric = new GlideModalForm('Create Financial Metric', 'x_adsi_cust_credit_financial_metric', retestValidFinancialMetrics);
+			gmfFinancialMetric.addParm('sysparm_query', 'credit_company=' + g_form.getValue('credit_customer'));
+			gmfFinancialMetric.render();			
+		}  // try
+		catch (err) {
+			alert('Error rendering Modal Form:  ' + err.message);
+		}  // try
+	}  // if (answer == 'false')
+}  //isValid
+
+function retestValidFinancialMetrics () {
+	alert('retesting');
+	validateLastTwoFiscalYearFinancialMetric(g_form.getValue('credit_customer'));
+}]]></script>
+        <sys_class_name>sys_script_client</sys_class_name>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2019-08-23 14:56:20</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>74260cc8dbabb700959bdd0b5e96193a</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name>validateLastTwoFiscalYearFinancialMetric</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_script_client_74260cc8dbabb700959bdd0b5e96193a</sys_update_name>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2019-08-23 18:52:01</sys_updated_on>
+        <table>x_adsi_cust_credit_customer_credit_review</table>
+        <type>onChange</type>
+        <ui_type>0</ui_type>
+        <view/>
+    </sys_script_client>
+</record_update>
