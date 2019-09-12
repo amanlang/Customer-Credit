@@ -32,9 +32,9 @@
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="String">string</internal_type>
+        <internal_type display_value="Currency">currency</internal_type>
         <mandatory>false</mandatory>
-        <max_length>200</max_length>
+        <max_length>20</max_length>
         <name>x_adsi_cust_credit_credit_customer</name>
         <next_element/>
         <primary>false</primary>
@@ -54,16 +54,16 @@
         <sys_created_by>A242291</sys_created_by>
         <sys_created_on>2019-07-02 13:10:57</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>ac921087db53f300959bdd0b5e961997</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_id>a2d11bd9dbbb73003098757a8c96195c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>Current AR</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_dictionary_x_adsi_cust_credit_credit_customer_current_ar</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-08-20 13:14:24</sys_updated_on>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2019-09-12 22:21:36</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

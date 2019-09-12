@@ -11,6 +11,7 @@ utilCustomerCreditApproval.prototype = {
 	initialize: function(sidCreditCustomer) {
 		this.sidCreditCustomer = ((sidCreditCustomer != undefined) ? sidCreditCustomer.toString() :'');
 		this.grCreditCustomer = new GlideRecord('x_adsi_cust_credit_credit_customer');
+		this.arrProfitCenters = [{'profit_center': 'Total Chemicals', 'business_segment': 'Chemical Intermediates'},{'profit_center': 'Intermediates', 'business_segment': 'Chemical Intermediates'},{'profit_center': 'Resins', 'business_segment': 'Nylon Solutions'},{'profit_center': 'Flexpack', 'business_segment': 'Nylon Solutions'},{'profit_center': 'Caprolactam', 'business_segment': 'Nylon Solutions'},{'profit_center': 'Aegis', 'business_segment': 'Nylon Solutions'},{'profit_center': 'Ammonium Sulfate', 'business_segment': 'Plant Nutrients'}];
 	},
 	
 	setCreditCustomer: function (sidCreditCustomer) {
@@ -99,6 +100,27 @@ utilCustomerCreditApproval.prototype = {
 		}  // finally
 	},  // validateLastTwoFiscalYearFinancialMetrics
 	
+	getBusinessSegmentFromProfitCenter: function (strProfitCenter) {
+		var strBusinessCenter = '';
+		var msgLog = 'utilCustomerCreditApproval.getBusinessSegmentFromProfitCenter(' + strProfitCenter + ')' + '\n';
+		try {
+			for (var ndx = 0; ndx < this.arrProfitCenters.length; ndx++) {
+				if (this.arrProfitCenters[ndx].profit_center == strProfitCenter) {
+					strBusinessCenter = this.arrProfitCenters[ndx].business_segment;
+					break;
+				}  // if (this.arrProfitCenters[ndx].profit_center == strProfitCenter)
+			}  // for (var ndx = 0; ndx < this.arrProfitCenters.length; ndx++)
+		}  // try
+		catch (err) {
+			msgLog += 'ERROR:  ' + err.message + '\n';
+		}  // catch
+		finally {
+			msgLog += '\t' + 'strBusinessCenter = ' + strBusinessCenter.toString() + '\n';
+			gs.info(msgLog);
+			return strBusinessCenter;
+		}  // finally
+	},  // getBusinessSegmentFromProfitCenter
+	
 	type: 'utilCustomerCreditApproval'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
@@ -106,7 +128,7 @@ utilCustomerCreditApproval.prototype = {
         <sys_created_on>2019-08-23 13:29:10</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>cb923f3bdb5bb700959bdd0b5e961960</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_name>utilCustomerCreditApproval</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy>read</sys_policy>
@@ -114,6 +136,6 @@ utilCustomerCreditApproval.prototype = {
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_script_include_cb923f3bdb5bb700959bdd0b5e961960</sys_update_name>
         <sys_updated_by>A288660</sys_updated_by>
-        <sys_updated_on>2019-08-23 19:16:42</sys_updated_on>
+        <sys_updated_on>2019-09-12 21:25:02</sys_updated_on>
     </sys_script_include>
 </record_update>

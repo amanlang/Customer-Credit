@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="business_segment" table="x_adsi_cust_credit_credit_customer" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>business_segment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Total Chemicals</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>100</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:17:37</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>e2ff0c22db3f7700959bdd0b5e9619e1</sys_id>
+            <sys_mod_count>1</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:21:01</sys_updated_on>
+            <value>Total Chemicals</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>business_segment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Intermediates</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>200</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:18:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>7620d422db3f7700959bdd0b5e9619a0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:18:13</sys_updated_on>
+            <value>Intermediates</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>business_segment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Resins</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>300</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:18:40</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2d409422db3f7700959bdd0b5e9619be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:18:40</sys_updated_on>
+            <value>Resins</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>business_segment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Flexpack</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>400</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:19:13</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>5d60d0eadbfb7700959bdd0b5e96196a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:19:13</sys_updated_on>
+            <value>Flexpack</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>business_segment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Caprolactam</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>500</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:19:44</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>c9809062db3f7700959bdd0b5e961979</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:19:44</sys_updated_on>
+            <value>Caprolactam</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>business_segment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Aegis</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>600</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:20:14</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2ca01c22db3f7700959bdd0b5e9619e6</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:20:14</sys_updated_on>
+            <value>Aegis</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>business_segment</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Ammonium Sulfate</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>700</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:20:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>beb0dc22db3f7700959bdd0b5e961984</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:20:41</sys_updated_on>
+            <value>Ammonium Sulfate</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>business_segment</element>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-12 20:17:37</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>4e00d822db3f7700959bdd0b5e961904</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>business_segment</sys_name>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_choice_x_adsi_cust_credit_credit_customer_business_segment</sys_update_name>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-12 20:17:37</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+</record_update>

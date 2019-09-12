@@ -7,11 +7,22 @@
         <element label="Active Child Account 4" max_length="200" name="active_child_account_4" type="string"/>
         <element label="Active Child Account 5" max_length="200" name="active_child_account_5" type="string"/>
         <element label="Active Child Account 6" max_length="200" name="active_child_account_6" type="string"/>
+        <element choice="1" label="Profit Center Segment" mandatory="true" max_length="40" name="business_segment" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="Total Chemicals" sequence="100" value="Total Chemicals"/>
+                <element inactive_on_update="false" label="Intermediates" sequence="200" value="Intermediates"/>
+                <element inactive_on_update="false" label="Resins" sequence="300" value="Resins"/>
+                <element inactive_on_update="false" label="Flexpack" sequence="400" value="Flexpack"/>
+                <element inactive_on_update="false" label="Caprolactam" sequence="500" value="Caprolactam"/>
+                <element inactive_on_update="false" label="Aegis" sequence="600" value="Aegis"/>
+                <element inactive_on_update="false" label="Ammonium Sulfate" sequence="700" value="Ammonium Sulfate"/>
+            </choice>
+        </element>
         <element label="Credit Review" max_length="200" name="credit_review" type="string"/>
-        <element label="Current AR" max_length="200" name="current_ar" type="string"/>
-        <element label="Current Exposure" max_length="200" name="current_exposure" type="string"/>
+        <element label="Current AR" max_length="20" name="current_ar" type="currency"/>
+        <element label="Current Exposure" max_length="20" name="current_exposure" type="currency"/>
         <element label="Current Payment Terms" max_length="200" name="current_payment_terms" type="string"/>
-        <element label="Current Year Forecasted Sales" max_length="200" name="current_year_forecasted_sales" type="string"/>
+        <element label="Current Year Forecasted Sales" max_length="20" name="current_year_forecasted_sales" type="currency"/>
         <element label="Customer Since" max_length="200" name="customer_since" type="string"/>
         <element label="Financial Highlights" max_length="2000" name="financial_highlights" type="string"/>
         <element label="GBP Number" max_length="200" name="gbp_number" type="string"/>
