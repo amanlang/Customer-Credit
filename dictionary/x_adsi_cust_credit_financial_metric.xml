@@ -23,13 +23,13 @@
         <element label="Net Fixed Assets" max_length="200" name="net_fixed_assets" type="currency"/>
         <element label="Net Income" max_length="200" name="net_income" type="currency"/>
         <element label="Net Sales" max_length="200" name="net_sales" type="currency"/>
-        <element label="Net Worth" max_length="200" name="net_worth" type="currency"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.total_assets - current.total_liability;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Net Worth" max_length="200" name="net_worth" read_only="true" type="currency" virtual="true"/>
         <element label="Quick Ratio" max_length="200" name="quick_ratio" type="float"/>
         <element label="Submitted" max_length="200" name="submitted" type="boolean"/>
         <element label="Total Assets" max_length="200" name="total_assets" type="currency"/>
         <element label="Total Debt" max_length="200" name="total_debt" type="currency"/>
         <element label="Total Liability" max_length="200" name="total_liability" type="currency"/>
-        <element label="Working Capital" max_length="200" name="working_capital" type="currency"/>
+        <element calculation="(function calculatedFieldValue(current) {&#13;&#10;&#13;&#10;&#9;// Add your code here&#13;&#10;&#9;return current.current_assets - current.current_liabilities;  // return the calculated value&#13;&#10;&#13;&#10;})(current);" label="Working Capital" max_length="200" name="working_capital" read_only="true" type="currency" virtual="true"/>
         <index name="index">
             <element name="credit_company"/>
         </index>

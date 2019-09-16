@@ -3,126 +3,224 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>name</element>
             <position>0</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>26e51d2ddbeab3003098757a8c96192e</sys_id>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>73ec7fa7db7bb3003098757a8c961997</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>credit_company</element>
             <position>1</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>a6e51d2ddbeab3003098757a8c96192e</sys_id>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>f3ec7fa7db7bb3003098757a8c961997</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>fiscal_year_end_date</element>
             <position>2</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>2ae51d2ddbeab3003098757a8c96192e</sys_id>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>77ec7fa7db7bb3003098757a8c961997</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>cash</element>
             <position>3</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>aae51d2ddbeab3003098757a8c96192e</sys_id>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>f7ec7fa7db7bb3003098757a8c961997</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>accounts_receivable</element>
-            <position>4</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>2ee51d2ddbeab3003098757a8c96192e</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>inventory</element>
-            <position>5</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>aee51d2ddbeab3003098757a8c96192e</sys_id>
+            <position>4</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>7bec7fa7db7bb3003098757a8c961997</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>total_debt</element>
-            <position>6</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>22e51d2ddbeab3003098757a8c96192f</sys_id>
+            <element>accounts_receivable</element>
+            <position>5</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>b7ecf7e7db7bb3003098757a8c96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.begin_split</element>
+            <position>6</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>3becf7e7db7bb3003098757a8c96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>current_assets</element>
             <position>7</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>a2e51d2ddbeab3003098757a8c96192f</sys_id>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>bbecf7e7db7bb3003098757a8c96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>current_liabilities</element>
             <position>8</position>
-            <sys_created_by>A242291</sys_created_by>
-            <sys_created_on>2019-07-09 19:30:32</sys_created_on>
-            <sys_id>26e51d2ddbeab3003098757a8c96192f</sys_id>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>3fecf7e7db7bb3003098757a8c96198d</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
-            <sys_updated_by>A242291</sys_updated_by>
-            <sys_updated_on>2019-07-09 19:30:32</sys_updated_on>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>working_capital</element>
+            <position>9</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>bfecf7e7db7bb3003098757a8c96198d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>10</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>33ecf7e7db7bb3003098757a8c96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_assets</element>
+            <position>11</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>b3ecf7e7db7bb3003098757a8c96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_liability</element>
+            <position>12</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>37ecf7e7db7bb3003098757a8c96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>net_worth</element>
+            <position>13</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>b7ecf7e7db7bb3003098757a8c96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>14</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>3becf7e7db7bb3003098757a8c96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>total_debt</element>
+            <position>15</position>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-09-16 16:06:35</sys_created_on>
+            <sys_id>bbecf7e7db7bb3003098757a8c96198e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="x_adsi_cust_credit_financial_metric" sys_domain="global" view="Default view">fcf5d19bdbd27b00959bdd0b5e9619a7</sys_ui_section>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-09-16 16:06:35</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
