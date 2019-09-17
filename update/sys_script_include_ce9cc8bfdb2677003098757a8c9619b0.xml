@@ -18,6 +18,7 @@ PreviewRequest_CreditCustomer.prototype = {
 	textSize: 'font-size: 10pt;',
 	textFont: 'font-family: verdana,geneva;',
 	cellBgBlue: 'background-color: #a1d8f7;',
+	cellBgYellow: 'background-color: yellow;',
 	cellBgGray: 'background-color: #adadad;',
 	underlineText: 'text-decoration: underline;',
 	//---------------------------------------------------------------------------------------
@@ -158,7 +159,6 @@ PreviewRequest_CreditCustomer.prototype = {
 				{'fieldName':'cash','cellType':'normal'},
 				{'fieldName':'accounts_receivable','cellType':'normal'},
 				{'fieldName':'inventory','cellType':'normal'},
-				{'fieldName':'total_debt','cellType':'normal'},
 				
 				{'fieldName': 'blank','cellType':'blankRow'},
 				
@@ -185,6 +185,7 @@ PreviewRequest_CreditCustomer.prototype = {
 				{'fieldName':'income_tax','cellType':'normal'},
 				{'fieldName':'interest_expenses','cellType':'normal'},
 				{'fieldName':'interest_investment_income','cellType':'normal'},
+				{'fieldName':'amortization','cellType':'yellow'},
 				{'fieldName':'depreciation','cellType':'normal'},
 				
 				{'fieldName':'ebitda','cellType':'blue'},
@@ -197,6 +198,13 @@ PreviewRequest_CreditCustomer.prototype = {
 				{'fieldName':'free_cash_flow','cellType':'blue'},
 
 				{'fieldName': 'blank','cellType':'blankRow'},
+				
+				{'fieldName':'total_debt','cellType':'yellow'},
+				{'fieldName':'net_debt','cellType':'yellow'},
+				{'fieldName':'net_debt_ebitda_ratio','cellType':'yellow'},
+
+				{'fieldName': 'blank','cellType':'blankRow'},
+				
 
 				{'fieldName':'current_ratio','cellType':'normal'},
 				{'fieldName':'quick_ratio','cellType':'normal'},
@@ -205,6 +213,7 @@ PreviewRequest_CreditCustomer.prototype = {
 			];
 		var normalCell = this.solidBorder + this.textSize + this.textFont;
 		var blueCell = this.cellBgBlue + normalCell;
+		var yellowCell = this.cellBgYellow + normalCell;
 		var normalEmptyRow =
 			'<tr>' +
 					'<td style="' + normalCell + '">&nbsp;</td>' +
@@ -267,6 +276,17 @@ PreviewRequest_CreditCustomer.prototype = {
 							'<td style="' + blueCell + '">' + this.boldText(currentYearValue) + '</td>' +
 							'<td style="' + blueCell + '">' + this.boldText(previousYearValue) + '</td>' +
 							'<td style="' + blueCell + '">' + this.boldText(this.getDiffPercent(currentYearRaw,prevYearRaw) +' %') + '</td>' +
+							'</tr>';
+						continue;
+					}
+					if(cellFields[ctr].cellType == 'yellow')
+					{
+						subTable = subTable +
+							'<tr>' +
+							'<td style="' + yellowCell + '">' + this.boldText(fieldLabel) + '</td>' +
+							'<td style="' + yellowCell + '">' + this.boldText(currentYearValue) + '</td>' +
+							'<td style="' + yellowCell + '">' + this.boldText(previousYearValue) + '</td>' +
+							'<td style="' + yellowCell + '">' + this.boldText(this.getDiffPercent(currentYearRaw,prevYearRaw) +' %') + '</td>' +
 							'</tr>';
 						continue;
 					}
@@ -559,7 +579,7 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_created_on>2019-07-16 14:17:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ce9cc8bfdb2677003098757a8c9619b0</sys_id>
-        <sys_mod_count>133</sys_mod_count>
+        <sys_mod_count>137</sys_mod_count>
         <sys_name>PreviewRequest_CreditCustomer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy>read</sys_policy>
@@ -567,6 +587,6 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_script_include_ce9cc8bfdb2677003098757a8c9619b0</sys_update_name>
         <sys_updated_by>A288660</sys_updated_by>
-        <sys_updated_on>2019-09-16 19:45:04</sys_updated_on>
+        <sys_updated_on>2019-09-17 20:11:02</sys_updated_on>
     </sys_script_include>
 </record_update>

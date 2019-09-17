@@ -31,12 +31,12 @@
         <sys_created_by>A288660</sys_created_by>
         <sys_created_on>2019-09-16 19:53:12</sys_created_on>
         <sys_id>63c07cf7db3fb3003098757a8c9619ca</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_updated_by>A288660</sys_updated_by>
-        <sys_updated_on>2019-09-17 16:36:08</sys_updated_on>
+        <sys_updated_on>2019-09-17 19:56:54</sys_updated_on>
         <table>x_adsi_cust_credit_customer_credit_review</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Customer Credit Review">7b46d650db7a7700959bdd0b5e96193e</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
