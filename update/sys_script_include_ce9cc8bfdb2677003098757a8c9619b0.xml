@@ -91,7 +91,7 @@ PreviewRequest_CreditCustomer.prototype = {
 				}
 			}
 			if(accName == '')
-				accName = 'accName BCDEF';
+				accName = 'No Child Accounts';
 		}
 		
 		var subTable = 
@@ -103,7 +103,12 @@ PreviewRequest_CreditCustomer.prototype = {
 			"</tr>" +
 			"<tr>" +
 				'<td style="' +this.textSize + this.textFont + '">' +
-					this.boldText("GBP Number:") + ": " +"</span>"+ gbpNumber +
+					this.boldText("Required Credit Limit:") + " " +"</span>"+ currentObject.required_credit_limit.getDisplayValue() +
+				"</td>" +
+			"</tr>" +
+			"<tr>" +
+				'<td style="' +this.textSize + this.textFont + '">' +
+					this.boldText("GBP Number:") + " " +"</span>"+ gbpNumber +
 				"</td>" +
 			"</tr>" +
 			"<tr>" +
@@ -304,39 +309,44 @@ PreviewRequest_CreditCustomer.prototype = {
 		{
 			subTable = subTable +
 			'<tr>' +
+				'<td style="' + normalCell + '">' + 'Commercial Credit Score' + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["commercial_credit_score_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["commercial_credit_score_analysis"]) + '</td>' +
+			'</tr>' +
+			'<tr>' +
 				'<td style="' + normalCell + '">' + 'Frisk Score' + '</td>' +
-				'<td style="' + normalCell + '">' + String(currentObject["frisk_score_analysis"]) + '</td>' +
 				'<td style="' + normalCell + '">' + String(currentObject["frisk_score_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["frisk_score_analysis"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style="' + normalCell + '">' + 'Z" Score' + '</td>' +
-				'<td style="' + normalCell + '">' + String(currentObject["z_score_analysis"]) + '</td>' +
 				'<td style="' + normalCell + '">' + String(currentObject["z_score_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["z_score_analysis"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style="' + normalCell + '">' + "Moody's" + '</td>' +
-				'<td style="' + normalCell + '">' + String(currentObject["moodys_analysis"]) + '</td>' +
 				'<td style="' + normalCell + '">' + String(currentObject["moodys_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["moodys_analysis"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style="' + normalCell + '">' + 'Fitch' + '</td>' +
-				'<td style="' + normalCell + '">' + String(currentObject["fitch_analysis"]) + '</td>' +
 				'<td style="' + normalCell + '">' + String(currentObject["fitch_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["fitch_analysis"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style="' + normalCell + '">' + 'DBT Index' + '</td>' +
-				'<td style="' + normalCell + '">' + String(currentObject["dbt_analysis"]) + '</td>' +
 				'<td style="' + normalCell + '">' + String(currentObject["dbt_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["dbt_analysis"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style="' + normalCell + '">' + 'PAYDEX' + '</td>' +
-				'<td style="' + normalCell + '">' + String(currentObject["paydex_analysis"]) + '</td>' +
 				'<td style="' + normalCell + '">' + String(currentObject["paydex_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["paydex_analysis"]) + '</td>' +
 			'</tr>' +
 			'<tr>' +
 				'<td style="' + normalCell + '">' + 'Fin Stress' + '</td>' +
-				'<td style="' + normalCell + '">' + String(currentObject["fin_stress_analysis"]) + '</td>' +
 				'<td style="' + normalCell + '">' + String(currentObject["fin_stress_grade"]) + '</td>' +
+				'<td style="' + normalCell + '">' + String(currentObject["fin_stress_analysis"]) + '</td>' +
 			'</tr>';			
 		}
 		catch(e)
@@ -362,12 +372,19 @@ PreviewRequest_CreditCustomer.prototype = {
 	},
 	cell_31: function(currentObject) //Recommendation Value
 	{
+		var jeRecommendations = currentObject.recommendation.getJournalEntry(-1);
+		//gets all journal entries as a string where each entry is delimited by '\n\n'
+		var arrRecommendations = jeRecommendations.split("\n\n");
 		
 		var subPart = 
 		'<td style="' + this.textFont + this.textSize + '">';
 		try
 		{
-			subPart = subPart +
+			for (var ndx = (arrRecommendations.length - 1); ndx >= 0; ndx--) {
+				subPart = subPart +
+				'<p align="justify">' + arrRecommendations[ndx] + '</p>';
+			}   // for (var ndx = 0; ndx < arrRecommendations.length; ndx++)
+			//subPart = subPart +
 				'<p align="justify">' + currentObject["recommendation"] + '</p>';			
 		}
 		catch(e)
@@ -542,7 +559,7 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_created_on>2019-07-16 14:17:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ce9cc8bfdb2677003098757a8c9619b0</sys_id>
-        <sys_mod_count>126</sys_mod_count>
+        <sys_mod_count>133</sys_mod_count>
         <sys_name>PreviewRequest_CreditCustomer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy>read</sys_policy>
@@ -550,6 +567,6 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_script_include_ce9cc8bfdb2677003098757a8c9619b0</sys_update_name>
         <sys_updated_by>A288660</sys_updated_by>
-        <sys_updated_on>2019-09-13 12:01:57</sys_updated_on>
+        <sys_updated_on>2019-09-16 19:45:04</sys_updated_on>
     </sys_script_include>
 </record_update>

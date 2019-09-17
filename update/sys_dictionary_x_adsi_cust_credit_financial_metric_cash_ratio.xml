@@ -8,7 +8,7 @@
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
 	// Add your code here
-	return '';  // return the calculated value
+	return (parseFloat(current.cash.toString())/parseFloat(current.current_liabilities.toString()));  // return the calculated value
 
 })(current);]]></calculation>
         <choice/>
@@ -38,7 +38,7 @@
         <name>x_adsi_cust_credit_financial_metric</name>
         <next_element/>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -55,22 +55,22 @@
         <sys_created_on>2019-07-01 19:42:31</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>11477a6fdbb77300959bdd0b5e9619b3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>Cash Ratio</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_dictionary_x_adsi_cust_credit_financial_metric_cash_ratio</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-09-16 11:02:32</sys_updated_on>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2019-09-16 17:59:39</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
         <use_dependent_field>false</use_dependent_field>
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
+        <virtual>true</virtual>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
