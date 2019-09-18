@@ -134,8 +134,8 @@ PreviewRequest_CreditCustomer.prototype = {
 		this.businessWithAsx(currentObject) +
 			'<p>&nbsp;</p>' +
 		this.financialHighlights(currentObject) +
-			'<p>&nbsp;</p>' +
-		this.liquidityRatio(currentObject);
+			'<p>&nbsp;</p>';
+		//this.liquidityRatio(currentObject);
 		
 		return cellComponent;
 
@@ -579,7 +579,7 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_created_on>2019-07-16 14:17:27</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
         <sys_id>ce9cc8bfdb2677003098757a8c9619b0</sys_id>
-        <sys_mod_count>137</sys_mod_count>
+        <sys_mod_count>138</sys_mod_count>
         <sys_name>PreviewRequest_CreditCustomer</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
         <sys_policy>read</sys_policy>
@@ -587,6 +587,6 @@ PreviewRequest_CreditCustomer.prototype = {
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_script_include_ce9cc8bfdb2677003098757a8c9619b0</sys_update_name>
         <sys_updated_by>A288660</sys_updated_by>
-        <sys_updated_on>2019-09-17 20:11:02</sys_updated_on>
+        <sys_updated_on>2019-09-18 12:01:52</sys_updated_on>
     </sys_script_include>
 </record_update>
