@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
-    <element audit="true" extends="task" label="Customer Credit Review" max_length="40" name="x_adsi_cust_credit_customer_credit_review" sizeclass="2" type="collection">
+    <element audit="true" extends="task" label="Customer Credit Review" max_length="40" name="x_adsi_cust_credit_customer_credit_review" sizeclass="1" type="collection">
         <element label="Commercial Credit Score Analysis" max_length="200" name="commercial_credit_score_analysis" type="string"/>
         <element label="Commercial Credit Score Grade" max_length="200" name="commercial_credit_score_grade" type="string"/>
         <element label="Credit Customer" max_length="32" name="credit_customer" reference="x_adsi_cust_credit_credit_customer" type="reference"/>
