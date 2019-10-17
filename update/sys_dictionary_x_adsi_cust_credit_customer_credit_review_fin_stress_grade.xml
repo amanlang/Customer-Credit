@@ -49,7 +49,7 @@
         <sys_created_by>system</sys_created_by>
         <sys_created_on>2019-07-09 19:24:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>5527f66fdbb77300959bdd0b5e961960</sys_id>
+        <sys_id>4fa77fa4dba88010959bdd0b5e961972</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Fin Stress Grade</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
@@ -58,7 +58,7 @@
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_dictionary_x_adsi_cust_credit_customer_credit_review_fin_stress_grade</sys_update_name>
         <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-09-16 11:02:27</sys_updated_on>
+        <sys_updated_on>2019-10-14 14:49:41</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
