@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_list parent="" relationship="" sys_domain="global" table="x_adsi_cust_credit_customer_credit_review" version="2" view="">
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>number</element>
+            <list_id display_value="x_adsi_cust_credit_customer_credit_review" element="NULL" name="x_adsi_cust_credit_customer_credit_review" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2efc34d3dbac48103098757a8c961922</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>0</position>
+            <sum>false</sum>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-10-22 14:16:31</sys_created_on>
+            <sys_id>66fc34d3dbac48103098757a8c961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-10-22 14:16:31</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>credit_customer</element>
+            <list_id display_value="x_adsi_cust_credit_customer_credit_review" element="NULL" name="x_adsi_cust_credit_customer_credit_review" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2efc34d3dbac48103098757a8c961922</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>1</position>
+            <sum>false</sum>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-10-22 14:16:31</sys_created_on>
+            <sys_id>e6fc34d3dbac48103098757a8c961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-10-22 14:16:31</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>short_description</element>
+            <list_id display_value="x_adsi_cust_credit_customer_credit_review" element="NULL" name="x_adsi_cust_credit_customer_credit_review" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2efc34d3dbac48103098757a8c961922</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-10-22 14:16:31</sys_created_on>
+            <sys_id>6afc34d3dbac48103098757a8c961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-10-22 14:16:31</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>required_credit_limit</element>
+            <list_id display_value="x_adsi_cust_credit_customer_credit_review" element="NULL" name="x_adsi_cust_credit_customer_credit_review" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2efc34d3dbac48103098757a8c961922</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-10-22 14:16:31</sys_created_on>
+            <sys_id>eafc34d3dbac48103098757a8c961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-10-22 14:16:31</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>recommendation</element>
+            <list_id display_value="x_adsi_cust_credit_customer_credit_review" element="NULL" name="x_adsi_cust_credit_customer_credit_review" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2efc34d3dbac48103098757a8c961922</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>4</position>
+            <sum>false</sum>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-10-22 14:16:31</sys_created_on>
+            <sys_id>6efc34d3dbac48103098757a8c961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-10-22 14:16:31</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>state</element>
+            <list_id display_value="x_adsi_cust_credit_customer_credit_review" element="NULL" name="x_adsi_cust_credit_customer_credit_review" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">2efc34d3dbac48103098757a8c961922</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>5</position>
+            <sum>false</sum>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-10-22 14:16:31</sys_created_on>
+            <sys_id>eefc34d3dbac48103098757a8c961923</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-10-22 14:16:31</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element/>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <name>x_adsi_cust_credit_customer_credit_review</name>
+            <parent/>
+            <position/>
+            <relationship/>
+            <sum>false</sum>
+            <sys_class_name>sys_ui_list</sys_class_name>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2019-10-22 14:16:31</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>2efc34d3dbac48103098757a8c961922</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>x_adsi_cust_credit_customer_credit_review</sys_name>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_ui_list_x_adsi_cust_credit_customer_credit_review_null</sys_update_name>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2019-10-22 14:16:31</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_list>
+    </sys_ui_list>
+</record_update>
