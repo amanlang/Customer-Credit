@@ -3,6 +3,7 @@
         <access>public</access>
         <active>true</active>
         <api_name>x_adsi_cust_credit.PreviewRequest_CreditCustomer</api_name>
+        <caller_access/>
         <client_callable>false</client_callable>
         <description/>
         <name>PreviewRequest_CreditCustomer</name>
