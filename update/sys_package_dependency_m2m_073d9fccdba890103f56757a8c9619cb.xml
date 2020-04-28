@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_package_dependency_m2m">
+    <sys_package_dependency_m2m action="INSERT_OR_UPDATE">
+        <dependency display_value="System Import Sets" source="com.glide.system_import_set">b3456c77db233200780edd0b5e961971</dependency>
+        <min_version>1.0.0</min_version>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2020-04-28 19:47:36</sys_created_on>
+        <sys_id>073d9fccdba890103f56757a8c9619cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2020-04-28 19:47:36</sys_updated_on>
+    </sys_package_dependency_m2m>
+</record_update>
