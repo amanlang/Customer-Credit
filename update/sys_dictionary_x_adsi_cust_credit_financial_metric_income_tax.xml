@@ -54,7 +54,7 @@
         <sys_created_by>A242291</sys_created_by>
         <sys_created_on>2019-07-01 19:42:29</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>ad7e3263db61085006e8349f9d961978</sys_id>
+        <sys_id>47da754cdba090103f56757a8c9619d1</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Income Tax</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
@@ -62,8 +62,8 @@
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_dictionary_x_adsi_cust_credit_financial_metric_income_tax</sys_update_name>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2019-12-12 11:23:54</sys_updated_on>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2020-04-28 12:38:05</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>

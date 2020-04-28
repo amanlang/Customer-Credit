@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_ui_module">
+    <sys_ui_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Customer Credit Approval">ce9bd74cdba890103f56757a8c961994</application>
+        <filter/>
+        <name>Payment Terms</name>
+        <order/>
+        <path/>
+        <path_relative_to_root>false</path_relative_to_root>
+        <roles>x_adsi_cust_credit.customer_credit_limit</roles>
+        <sys_class_name>sys_ui_module</sys_class_name>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2020-04-28 19:40:25</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>029bd74cdba890103f56757a8c9619a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Payment Terms</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>sys_ui_module_029bd74cdba890103f56757a8c9619a4</sys_update_name>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2020-04-28 19:40:25</sys_updated_on>
+        <table>x_adsi_cust_credit_payment_terms</table>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+    </sys_ui_module>
+</record_update>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ua_table_licensing_config">
+    <ua_table_licensing_config action="INSERT_OR_UPDATE">
+        <is_fulfillment>false</is_fulfillment>
+        <license_condition/>
+        <license_model>none</license_model>
+        <license_roles/>
+        <name>x_adsi_cust_credit_credit_customer</name>
+        <op_delete>true</op_delete>
+        <op_insert>true</op_insert>
+        <op_update>true</op_update>
+        <owner_condition/>
+        <sys_class_name>ua_table_licensing_config</sys_class_name>
+        <sys_created_by>A242291</sys_created_by>
+        <sys_created_on>2019-07-02 13:10:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_id>2bdab54cdba090103f56757a8c961928</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_adsi_cust_credit_credit_customer</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_update_name>ua_table_licensing_config_2bdab54cdba090103f56757a8c961928</sys_update_name>
+        <sys_updated_by>A242291</sys_updated_by>
+        <sys_updated_on>2019-07-02 13:10:59</sys_updated_on>
+    </ua_table_licensing_config>
+</record_update>

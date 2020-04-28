@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Payment Terms" max_length="40" name="x_adsi_cust_credit_payment_terms" type="collection">
+        <element display="true" label="Description" max_length="400" name="payment_term_description" type="string"/>
+        <element label="PayT" mandatory="true" max_length="40" name="payment_term_id" type="string" unique="true"/>
+    </element>
+</database>
