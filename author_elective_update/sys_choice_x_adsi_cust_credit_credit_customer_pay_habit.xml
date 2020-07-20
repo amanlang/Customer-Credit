@@ -1,4 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="DELETE" field="pay_habit" table="x_adsi_cust_credit_credit_customer" version="3">
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>pay_habit</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Poor</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>10</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2020-04-28 19:31:52</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>26891f88dba890103f56757a8c961943</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2020-04-28 19:31:52</sys_updated_on>
+            <value>Poor</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>pay_habit</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Slow</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>20</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2020-04-28 19:32:09</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>34b99748dba890103f56757a8c9619d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2020-04-28 19:32:09</sys_updated_on>
+            <value>Slow</value>
+        </sys_choice>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>pay_habit</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>Prompt</label>
+            <language>en</language>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sequence>30</sequence>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2020-04-28 19:32:28</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>55c913c8dba890103f56757a8c96190e</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2020-04-28 19:32:28</sys_updated_on>
+            <value>Prompt</value>
+        </sys_choice>
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>pay_habit</element>
+            <name>x_adsi_cust_credit_credit_customer</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>A288660</sys_created_by>
+            <sys_created_on>2020-04-28 19:31:52</sys_created_on>
+            <sys_customer_update>false</sys_customer_update>
+            <sys_id>3ca99748dba890103f56757a8c9619ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>pay_habit</sys_name>
+            <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+            <sys_policy/>
+            <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+            <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+            <sys_update_name>sys_choice_x_adsi_cust_credit_credit_customer_pay_habit</sys_update_name>
+            <sys_updated_by>A288660</sys_updated_by>
+            <sys_updated_on>2020-04-28 19:31:52</sys_updated_on>
+        </sys_choice_set>
+    </sys_choice>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</application>
+        <file_path/>
+        <instance_id>030d58ffdb6772088264f70fbf961952</instance_id>
+        <instance_name>advansixdev</instance_name>
+        <name>sys_choice_x_adsi_cust_credit_credit_customer_pay_habit</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
     <sys_choice action="INSERT_OR_UPDATE" field="pay_habit" table="x_adsi_cust_credit_credit_customer" version="3">
         <sys_choice action="INSERT_OR_UPDATE">
             <dependent_value/>
@@ -76,4 +161,44 @@
             <sys_updated_on>2020-04-28 19:31:52</sys_updated_on>
         </sys_choice_set>
     </sys_choice>
+</record_update>]]></payload>
+        <payload_hash>-66659971</payload_hash>
+        <record_name>Credit Customer.Pay Habit</record_name>
+        <reverted_from/>
+        <source>db387af21b465010301b86afdc4bcb12</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2020-07-20 19:43:26</sys_created_on>
+        <sys_id>df387af21b465010301b86afdc4bcb1c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1736dc09b6f0000001</sys_recorded_at>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2020-07-20 19:43:26</sys_updated_on>
+        <type>Choice list</type>
+        <update_guid>1f387af2b34650108a307cf7b692dd1c</update_guid>
+        <update_guid_history>1f387af2b34650108a307cf7b692dd1c:0,a597fe32da465010afbea4325770535e:255742592,d997fe32674650107ae4f40758a1ad54:1866993407,9597fe32a3465010ee1714e1708ed14b:576927381,3c3732fe5806501025555f1ce762fd71:-413771926,bb1772fe1b065010c2a8cdf3de2fd873:-2104504492,ec17fe7eba065010d582ea810f3a3504:1067622814</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>A288660</sys_created_by>
+        <sys_created_on>2020-07-20 19:45:04</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
+        <sys_db_object display_value="" name="sys_choice_set">sys_choice_set</sys_db_object>
+        <sys_id>db387af21b465010301b86afdc4bcb19</sys_id>
+        <sys_metadata>db387af21b465010301b86afdc4bcb19</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>pay_habit</sys_name>
+        <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
+        <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
+        <sys_scope_delete display_value="">26f562fa675147208e20eb2424276100</sys_scope_delete>
+        <sys_update_name>sys_choice_x_adsi_cust_credit_credit_customer_pay_habit</sys_update_name>
+        <sys_update_version display_value="sys_choice_x_adsi_cust_credit_credit_customer_pay_habit">df387af21b465010301b86afdc4bcb1c</sys_update_version>
+        <sys_updated_by>A288660</sys_updated_by>
+        <sys_updated_on>2020-07-20 19:45:04</sys_updated_on>
+    </sys_metadata_delete>
 </record_update>

@@ -54,7 +54,7 @@
         <sys_created_by>A242291</sys_created_by>
         <sys_created_on>2019-07-05 17:28:34</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>53da754cdba090103f56757a8c9619e1</sys_id>
+        <sys_id>3bf7fab21b465010301b86afdc4bcb8a</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>Total Liability</sys_name>
         <sys_package display_value="Customer Credit Approval" source="x_adsi_cust_credit">34b04776dbd63b003098757a8c9619ba</sys_package>
@@ -63,7 +63,7 @@
         <sys_scope display_value="Customer Credit Approval">34b04776dbd63b003098757a8c9619ba</sys_scope>
         <sys_update_name>sys_dictionary_x_adsi_cust_credit_financial_metric_total_liability</sys_update_name>
         <sys_updated_by>A288660</sys_updated_by>
-        <sys_updated_on>2020-04-28 12:38:08</sys_updated_on>
+        <sys_updated_on>2020-07-20 19:43:18</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
