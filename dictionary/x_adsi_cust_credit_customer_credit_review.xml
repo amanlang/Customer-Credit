@@ -18,7 +18,9 @@
         <element label="PAYDEX Analysis" max_length="200" name="paydex_analysis" type="string"/>
         <element label="PAYDEX Grade" max_length="200" name="paydex_grade" type="string"/>
         <element choice="1" label="Payment Terms" max_length="200" name="payment_terms" reference="x_adsi_cust_credit_payment_terms" type="reference">
-            <choice/>
+            <choice>
+                <element inactive_on_update="false" label="Poor" sequence="10" value="Poor"/>
+            </choice>
         </element>
         <element label="Recommendation" max_length="2000" name="recommendation" type="journal"/>
         <element label="Request Preview" max_length="5000" name="request_preview" read_only="true" type="html"/>

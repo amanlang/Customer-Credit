@@ -21,7 +21,7 @@
         <element label="Credit Review" max_length="200" name="credit_review" type="string"/>
         <element label="Current AR" max_length="20" name="current_ar" type="currency"/>
         <element label="Current Exposure" max_length="20" name="current_exposure" type="currency"/>
-        <element label="Current Payment Terms" max_length="200" name="current_payment_terms" type="string"/>
+        <element label="Current Payment Terms" max_length="200" name="current_payment_terms" reference="x_adsi_cust_credit_payment_terms" type="reference"/>
         <element label="Current Year Forecasted Sales" max_length="20" name="current_year_forecasted_sales" type="currency"/>
         <element label="Customer Since" max_length="200" name="customer_since" type="string"/>
         <element label="Financial Highlights" max_length="2000" name="financial_highlights" type="string"/>
@@ -30,8 +30,8 @@
         <element choice="1" label="Pay Habit" max_length="200" name="pay_habit" type="choice">
             <choice>
                 <element inactive_on_update="false" label="Poor" sequence="10" value="Poor"/>
-                <element inactive_on_update="false" label="Prompt" sequence="20" value="Prompt"/>
-                <element inactive_on_update="false" label="Slow" sequence="30" value="Slow"/>
+                <element inactive_on_update="false" label="Slow" sequence="20" value="Slow"/>
+                <element inactive_on_update="false" label="Prompt" sequence="30" value="Prompt"/>
             </choice>
         </element>
         <element label="Prior Year Sales" max_length="20" name="prior_year_sales" type="currency"/>
