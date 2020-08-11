@@ -5,8 +5,8 @@
         <element label="Credit Customer" max_length="32" name="credit_customer" reference="x_adsi_cust_credit_credit_customer" type="reference"/>
         <element label="DBT Analysis" max_length="200" name="dbt_analysis" type="string"/>
         <element label="DBT Grade" max_length="200" name="dbt_grade" type="string"/>
-        <element label="Financial Metric Current Year" max_length="32" name="financial_metric_current_year" reference="x_adsi_cust_credit_financial_metric" type="reference"/>
-        <element label="Financial Metric Previous Year" max_length="32" name="financial_metric_previous_year" reference="x_adsi_cust_credit_financial_metric" type="reference"/>
+        <element label="Financial Metric Current Period" max_length="32" name="financial_metric_current_year" reference="x_adsi_cust_credit_financial_metric" type="reference"/>
+        <element label="Financial Metric Previous Period" max_length="32" name="financial_metric_previous_year" reference="x_adsi_cust_credit_financial_metric" type="reference"/>
         <element label="Fin Stress Analysis" max_length="200" name="fin_stress_analysis" type="string"/>
         <element attributes="edge_encryption_enabled=true" label="Fin Stress Grade" max_length="200" name="fin_stress_grade" type="string"/>
         <element label="Fitch Analysis" max_length="200" name="fitch_analysis" type="string"/>
